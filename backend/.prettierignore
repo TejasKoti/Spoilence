@@ -1,0 +1,10 @@
+plan.md
+pnpm-lock.yaml
+package-lock.json
+node_modules
+dist
+artifacts
+test-results
+**/build
+**/.gradle
+apps/ios/safari-extension/Resources

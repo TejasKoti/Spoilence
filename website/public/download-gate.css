@@ -1,0 +1,145 @@
+.download-choice {
+  padding-block: 28px;
+  border-top: 1px solid #303030;
+  scroll-margin-top: 20px;
+}
+.download-choice h2 {
+  margin-top: 0 !important;
+}
+.download-choice label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.download-choice input {
+  accent-color: #fdba74;
+  width: 20px;
+  min-height: 44px;
+  margin: 0;
+}
+.download-choice button {
+  margin-top: 10px;
+}
+.download-terms-dialog {
+  box-sizing: border-box;
+  width: min(560px, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 1px solid #62605c;
+  border-radius: 12px;
+  background: #11151d;
+  color: #fff;
+  color-scheme: dark;
+  box-shadow: 0 24px 90px #0009;
+  scrollbar-width: thin;
+  scrollbar-color: #fdba74 #11151d;
+}
+.download-terms-dialog::backdrop {
+  background: #080808d9;
+}
+.download-terms-body {
+  padding: 28px;
+}
+#download-terms-title {
+  margin: 0 0 16px;
+  font:
+    500 30px/1.15 Inter,
+    "Segoe UI",
+    sans-serif;
+  letter-spacing: -0.03em;
+}
+.download-terms-file,
+.download-terms-version {
+  margin: 8px 0;
+  color: #bbb8b2;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.download-terms-summary {
+  margin: 24px 0;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.download-terms-summary li {
+  padding-left: 4px;
+  margin: 10px 0;
+}
+.download-terms-link {
+  color: #fdba74;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.download-terms-agreement {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 24px 0;
+  padding: 16px;
+  border: 1px solid #47494d;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+#accept-download-terms {
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  min-height: 20px;
+  margin: 1px 0 0;
+  accent-color: #fdba74;
+  cursor: pointer;
+}
+.download-terms-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.download-terms-actions button {
+  flex: 1 1 auto;
+  min-height: 48px;
+  padding: 12px 16px;
+  border: 1px solid #686663;
+  border-radius: 8px;
+  background: #11151d;
+  color: #fff;
+  font:
+    500 14px/1.4 Inter,
+    "Segoe UI",
+    sans-serif;
+  cursor: pointer;
+}
+#confirm-download {
+  background: #fdba74;
+  color: #11151d;
+  border-color: #fdba74;
+}
+#confirm-download:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.download-terms-dialog :focus-visible {
+  outline: 2px solid #fdba74;
+  outline-offset: 4px;
+}
+@media (max-width: 420px) {
+  .download-terms-body {
+    padding: 20px;
+  }
+  #download-terms-title {
+    font-size: 27px;
+  }
+}
+@media (forced-colors: active) {
+  .download-terms-dialog,
+  .download-terms-actions button {
+    border-color: ButtonText;
+  }
+}

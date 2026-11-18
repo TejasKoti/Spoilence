@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en" class="spoilence-page">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080808" />
+    <meta
+      name="description"
+      content="Keep your first GTA VI playthrough yours. Spoilence is a local browser extension that conceals potential spoilers on YouTube, Instagram and TikTok."
+    />
+    <meta
+      property="og:title"
+      content="Spoilence: Keep your first playthrough yours."
+    />
+    <meta
+      property="og:description"
+      content="Your feed. Your choice. Local GTA VI spoiler protection for desktop browsers."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="color-scheme" content="dark" />
+    <title>Spoilence: Keep your first playthrough yours.</title>
+    <link rel="icon" href="/assets/favicon.png" type="image/png" />
+    <link
+      rel="preload"
+      href="/assets/fonts/InterVariable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/cinematic.css" />
+    <link rel="stylesheet" href="/browser-picker.css" />
+    <link rel="stylesheet" href="/download-gate.css" />
+    <script src="/browser-catalog.js" defer></script>
+    <script src="/reactive-scene.js" defer></script>
+    <script src="/browser-picker.js" defer></script>
+    <script src="/download-gate.js" defer></script>
+    <script src="/app.js" defer></script>
+  </head>
+  <body class="reference-site">
+    <a class="skip-link" href="#main" tabindex="0">Skip to content</a>
+    <svg
+      class="icon-library"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol id="i-download" viewBox="0 0 24 24">
+        <path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5" />
+      </symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24">
+        <path d="M3 12c5-8 13-8 18 0-5 8-13 8-18 0ZM5 3l14 18" />
+      </symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24">
+        <path d="m12 2 8 4v6c0 5-4 8-8 10-4-2-8-5-8-10V6Z" />
+        <path d="m8 12 3 3 5-6" />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="m5 12 5 5L20 7" />
+      </symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12h14" />
+      </symbol>
+      <symbol id="i-device" viewBox="0 0 24 24">
+        <path d="M4 3h16v13H4zM2 20h20M9 16v4m6-4v4m-7-10 3 3 5-6" />
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 6v6l4 2" />
+      </symbol>
+      <symbol id="i-user-off" viewBox="0 0 24 24">
+        <path
+          d="M8 4a4 4 0 0 1 6 5M9 10a4 4 0 0 1-1-6M4 20v-2a6 6 0 0 1 10-4m4 4v2M3 3l18 18"
+        />
+      </symbol>
+    </svg>
+    <header class="site-header wrap cinematic-header">
+      <nav class="nav-left" aria-label="About Spoilence">
+        <a href="#demo"><span>01</span> The shield</a>
+        <a href="#privacy"><span>02</span> Privacy</a>
+      </nav>
+      <a class="wordmark brand-mark" href="/" aria-label="Spoilence home">
+        <img src="/assets/spoilence-logo.png" width="44" height="44" alt="" />
+      </a>
+      <nav class="nav-right" aria-label="Get Spoilence">
+        <a href="#questions"><span>04</span> Questions</a>
+        <a href="#install"
+          ><span>03</span> Get Spoilence <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+    </header>
+    <main id="main" tabindex="-1">
+      <section
+        class="hero scene experience"
+        id="shield-scene"
+        aria-labelledby="hero-title"
+      >
+        <div class="experience-stage" id="experience-stage">
+          <div class="core-visual" aria-hidden="true">
+            <svg
+              class="core-fallback"
+              viewBox="0 0 1440 900"
+              preserveAspectRatio="xMidYMid slice"
+              role="presentation"
+            >
+              <defs>
+                <pattern
+                  id="field-dots"
+                  width="8"
+                  height="8"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <rect x="1" y="1" width="2" height="2" fill="#f2f2ee" />
+                </pattern>
+                <pattern
+                  id="fold-dots"
+                  width="5"
+                  height="5"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <rect x="1" y="1" width="3" height="3" fill="#f2f2ee" />
+                </pattern>
+              </defs>
+              <rect
+                width="1440"
+                height="900"
+                fill="url(#field-dots)"
+                opacity=".12"
+              />
+              <circle
+                cx="936"
+                cy="360"
+                r="255"
+                fill="url(#fold-dots)"
+                opacity=".45"
+              />
+              <circle
+                cx="936"
+                cy="360"
+                r="310"
+                fill="none"
+                stroke="#f2f2ee"
+                stroke-width="2"
+                opacity=".12"
+              />
+              <circle
+                cx="936"
+                cy="360"
+                r="370"
+                fill="none"
+                stroke="#fdba74"
+                stroke-width="1"
+                opacity=".07"
+              />
+            </svg>
+            <canvas id="shield-core" aria-hidden="true"></canvas>
+          </div>
+          <div class="scene-depth" id="scene-depth" aria-hidden="true">
+            <img
+              class="scene-base"
+              src="/assets/gta-vi-vice-city.jpg"
+              srcset="
+                /assets/gta-vi-vice-city-small.jpg  960w,
+                /assets/gta-vi-vice-city.jpg       1920w
+              "
+              sizes="100vw"
+              alt=""
+              width="1920"
+              height="1080"
+              fetchpriority="high"
+            />
+          </div>
+          <div class="hero-scrim" aria-hidden="true"></div>
+          <div class="hero-theater wrap">
+            <div class="hero-copy" id="hero-copy">
+              <p class="edition">
+                <span class="live-dot" aria-hidden="true"></span> Your next
+                playthrough. Unspoiled.
+              </p>
+              <h1 id="hero-title">
+                <span>Your first.</span
+                ><span class="type-outline">Your story.</span
+                ><span>Your rules.</span>
+              </h1>
+            </div>
+          </div>
+          <div class="hero-pitch" id="hero-pitch">
+            <p>
+              <strong>You get one first time.</strong><br />Keep GTA VI spoilers
+              out of your feed.
+            </p>
+            <div class="hero-actions">
+              <a class="quiet-link" href="#demo"
+                >Try the shield <span aria-hidden="true">↗</span></a
+              >
+              <a class="button button-peach" href="#install"
+                >Download Spoilence<svg class="icon" aria-hidden="true">
+                  <use href="#i-download" /></svg
+              ></a>
+            </div>
+            <p class="download-note">Free browser bundle. Desktop only.</p>
+          </div>
+          <div class="hero-signature wrap" aria-hidden="true">SPOILENCE</div>
+          <div class="hero-foot wrap">
+            <p>Keep the story in the game.</p>
+            <a class="quiet-link" href="#demo"
+              >Explore the shield <span aria-hidden="true">↓</span></a
+            >
+          </div>
+        </div>
+      </section>
+      <div class="browser-band wrap" aria-label="Browser families">
+        <p>One shield.<br /><strong>Your browser.</strong></p>
+        <!-- Browser silhouettes: Simple Icons (CC0). microsoftedge v11.15.0, simplified safari v8.1.0; other paths from develop. Brand rights remain with their owners. https://github.com/simple-icons/simple-icons -->
+        <div class="browser-names">
+          <span
+            ><svg class="browser-logo" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0 1 12 6.545h10.691A12 12 0 0 0 12 0zM1.931 5.47A11.943 11.943 0 0 0 0 12c0 6.012 4.42 10.991 10.189 11.864l3.953-6.847a5.45 5.45 0 0 1-6.865-2.29zm13.342 2.166a5.446 5.446 0 0 1 1.45 7.09l.002.001h-.002l-5.344 9.257c.206.01.413.016.621.016 6.627 0 12-5.373 12-12 0-1.54-.29-3.011-.818-4.364zM12 16.364a4.364 4.364 0 1 1 0-8.728 4.364 4.364 0 0 1 0 8.728Z"
+              /></svg
+            >Chrome</span
+          >
+          <span
+            ><svg class="browser-logo" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M21.86 17.86q.14 0 .25.12.1.13.1.25t-.11.33l-.32.46-.43.53-.44.5q-.21.25-.38.42l-.22.23q-.58.53-1.34 1.04-.76.51-1.6.91-.86.4-1.74.64t-1.67.24q-.9 0-1.69-.28-.8-.28-1.48-.78-.68-.5-1.22-1.17-.53-.66-.92-1.44-.38-.77-.58-1.6-.2-.83-.2-1.67 0-1 .32-1.96.33-.97.87-1.8.14.95.55 1.77.41.82 1.02 1.5.6.68 1.38 1.21.78.54 1.64.9.86.36 1.77.56.92.2 1.8.2 1.12 0 2.18-.24 1.06-.23 2.06-.72l.2-.1.2-.05zm-15.5-1.27q0 1.1.27 2.15.27 1.06.78 2.03.51.96 1.24 1.77.74.82 1.66 1.4-1.47-.2-2.8-.74-1.33-.55-2.48-1.37-1.15-.83-2.08-1.9-.92-1.07-1.58-2.33T.36 14.94Q0 13.54 0 12.06q0-.81.32-1.49.31-.68.83-1.23.53-.55 1.2-.96.66-.4 1.35-.66.74-.27 1.5-.39.78-.12 1.55-.12.7 0 1.42.1.72.12 1.4.35.68.23 1.32.57.63.35 1.16.83-.35 0-.7.07-.33.07-.65.23v-.02q-.63.28-1.2.74-.57.46-1.05 1.04-.48.58-.87 1.26-.38.67-.65 1.39-.27.71-.42 1.44-.15.72-.15 1.38zM11.96.06q1.7 0 3.33.39 1.63.38 3.07 1.15 1.43.77 2.62 1.93 1.18 1.16 1.98 2.7.49.94.76 1.96.28 1 .28 2.08 0 .89-.23 1.7-.24.8-.69 1.48-.45.68-1.1 1.22-.64.53-1.45.88-.54.24-1.11.36-.58.13-1.16.13-.42 0-.97-.03-.54-.03-1.1-.12-.55-.1-1.05-.28-.5-.19-.84-.5-.12-.09-.23-.24-.1-.16-.1-.33 0-.15.16-.35.16-.2.35-.5.2-.28.36-.68.16-.4.16-.95 0-1.06-.4-1.96-.4-.91-1.06-1.64-.66-.74-1.52-1.28-.86-.55-1.79-.89-.84-.3-1.72-.44-.87-.14-1.76-.14-1.55 0-3.06.45T.94 7.55q.71-1.74 1.81-3.13 1.1-1.38 2.52-2.35Q6.68 1.1 8.37.58q1.7-.52 3.58-.52Z"
+              /></svg
+            >Edge</span
+          >
+          <span
+            ><svg class="browser-logo" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M15.68 0l2.096 2.38s1.84-.512 2.709.358c.868.87 1.584 1.638 1.584 1.638l-.562 1.381.715 2.047s-2.104 7.98-2.35 8.955c-.486 1.919-.818 2.66-2.198 3.633-1.38.972-3.884 2.66-4.293 2.916-.409.256-.92.692-1.38.692-.46 0-.97-.436-1.38-.692a185.796 185.796 0 01-4.293-2.916c-1.38-.973-1.712-1.714-2.197-3.633-.247-.975-2.351-8.955-2.351-8.955l.715-2.047-.562-1.381s.716-.768 1.585-1.638c.868-.87 2.708-.358 2.708-.358L8.321 0h7.36zm-3.679 14.936c-.14 0-1.038.317-1.758.69-.72.373-1.242.637-1.409.742-.167.104-.065.301.087.409.152.107 2.194 1.69 2.393 1.866.198.175.489.464.687.464.198 0 .49-.29.688-.464.198-.175 2.24-1.759 2.392-1.866.152-.108.254-.305.087-.41-.167-.104-.689-.368-1.41-.741-.72-.373-1.617-.69-1.757-.69zm0-11.278s-.409.001-1.022.206-1.278.46-1.584.46c-.307 0-2.581-.434-2.581-.434S4.119 7.152 4.119 7.849c0 .697.339.881.68 1.243l2.02 2.149c.192.203.59.511.356 1.066-.235.555-.58 1.26-.196 1.977.384.716 1.042 1.194 1.464 1.115.421-.08 1.412-.598 1.776-.834.364-.237 1.518-1.19 1.518-1.554 0-.365-1.193-1.02-1.413-1.168-.22-.15-1.226-.725-1.247-.95-.02-.227-.012-.293.284-.851.297-.559.831-1.304.742-1.8-.089-.495-.95-.753-1.565-.986-.615-.232-1.799-.671-1.947-.74-.148-.068-.11-.133.339-.175.448-.043 1.719-.212 2.292-.052.573.16 1.552.403 1.632.532.079.13.149.134.067.579-.081.445-.5 2.581-.541 2.96-.04.38-.12.63.288.724.409.094 1.097.256 1.333.256s.924-.162 1.333-.256c.408-.093.329-.344.288-.723-.04-.38-.46-2.516-.541-2.961-.082-.445-.012-.45.067-.579.08-.129 1.059-.372 1.632-.532.573-.16 1.845.009 2.292.052.449.042.487.107.339.175-.148.069-1.332.508-1.947.74-.615.233-1.476.49-1.565.986-.09.496.445 1.241.742 1.8.297.558.304.624.284.85-.02.226-1.026.802-1.247.95-.22.15-1.413.804-1.413 1.169 0 .364 1.154 1.317 1.518 1.554.364.236 1.355.755 1.776.834.422.079 1.08-.4 1.464-1.115.384-.716.039-1.422-.195-1.977-.235-.555.163-.863.355-1.066l2.02-2.149c.341-.362.68-.546.68-1.243 0-.697-2.695-3.96-2.695-3.96s-2.274.436-2.58.436c-.307 0-.972-.256-1.585-.461-.613-.205-1.022-.206-1.022-.206z"
+              /></svg
+            >Brave</span
+          >
+          <span
+            ><svg class="browser-logo" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M24 12.01c0 3.412-1.462 6.674-4.013 8.943A12 12 0 0 1 11.992 24c-.178 0-.385-.019-.563-.019C5.016 23.681 0 18.403 0 11.991 0 5.37 5.372 0 11.99 0h.038c2.944 0 5.775 1.087 7.96 3.047A12.04 12.04 0 0 1 24 12.009zm-9.14 10.443c-2.729-.056-5.279-1.397-7.041-3.684-1.388-1.64-2.203-4.013-2.269-6.516v-.544c.047-2.521.881-4.893 2.269-6.534 1.744-2.269 4.294-3.61 7.012-3.666a10.67 10.67 0 0 0-2.784-.384h-.038c-5.99 0-10.865 4.894-10.865 10.866 0 5.812 4.528 10.584 10.34 10.847a10.087 10.087 0 0 0 3.375-.385zm7.996-10.444c0-3.065-1.303-5.99-3.59-8.053a7.69 7.69 0 0 0-4.228-1.284c-2.447 0-4.754 1.181-6.357 3.244-1.247 1.462-1.969 3.59-2.025 5.83v.526c.056 2.25.778 4.369 2.006 5.812l.02.02c1.602 2.071 3.909 3.252 6.355 3.252a7.69 7.69 0 0 0 4.229-1.284 10.894 10.894 0 0 0 3.59-8.063zm-3.75 0c0 4.05-2.184 7.341-4.912 7.585 2.128-1.388 3.61-4.257 3.61-7.585 0-3.328-1.463-6.197-3.61-7.575 2.728.244 4.912 3.525 4.912 7.575z"
+              /></svg
+            >Opera GX</span
+          >
+          <span
+            ><svg class="browser-logo" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M8.824 7.287c.008 0 .004 0 0 0zm-2.8-1.4c.006 0 .003 0 0 0zm16.754 2.161c-.505-1.215-1.53-2.528-2.333-2.943.654 1.283 1.033 2.57 1.177 3.53l.002.02c-1.314-3.278-3.544-4.6-5.366-7.477-.091-.147-.184-.292-.273-.446a3.545 3.545 0 01-.13-.24 2.118 2.118 0 01-.172-.46.03.03 0 00-.027-.03.038.038 0 00-.021 0l-.006.001a.037.037 0 00-.01.005L15.624 0c-2.585 1.515-3.657 4.168-3.932 5.856a6.197 6.197 0 00-2.305.587.297.297 0 00-.147.37c.057.162.24.24.396.17a5.622 5.622 0 012.008-.523l.067-.005a5.847 5.847 0 011.957.222l.095.03a5.816 5.816 0 01.616.228c.08.036.16.073.238.112l.107.055a5.835 5.835 0 01.368.211 5.953 5.953 0 012.034 2.104c-.62-.437-1.733-.868-2.803-.681 4.183 2.09 3.06 9.292-2.737 9.02a5.164 5.164 0 01-1.513-.292 4.42 4.42 0 01-.538-.232c-1.42-.735-2.593-2.121-2.74-3.806 0 0 .537-2 3.845-2 .357 0 1.38-.998 1.398-1.287-.005-.095-2.029-.9-2.817-1.677-.422-.416-.622-.616-.8-.767a3.47 3.47 0 00-.301-.227 5.388 5.388 0 01-.032-2.842c-1.195.544-2.124 1.403-2.8 2.163h-.006c-.46-.584-.428-2.51-.402-2.913-.006-.025-.343.176-.389.206-.406.29-.787.616-1.136.974-.397.403-.76.839-1.085 1.303a9.816 9.816 0 00-1.562 3.52c-.003.013-.11.487-.19 1.073-.013.09-.026.181-.037.272a7.8 7.8 0 00-.069.667l-.002.034-.023.387-.001.06C.386 18.795 5.593 24 12.016 24c5.752 0 10.527-4.176 11.463-9.661.02-.149.035-.298.052-.448.232-1.994-.025-4.09-.753-5.844z"
+              /></svg
+            >Firefox</span
+          >
+          <span
+            ><svg class="browser-logo" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 24C5.373 24 0 18.627 0 12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12zm0-.75c6.213 0 11.25-5.037 11.25-11.25S18.213.75 12 .75.75 5.787.75 12 5.787 23.25 12 23.25zM12.879 12.879L11.12 11.12l-4.141 5.9 5.899-4.142zm6.192-7.95l-5.834 8.308-8.308 5.834 5.834-8.308 8.308-5.834z"
+              /></svg
+            >Safari<sup>*</sup></span
+          >
+        </div>
+        <p class="band-note">
+          Compatible desktop browsers.<br />Setup and validation vary.
+        </p>
+      </div>
+
+      <section
+        class="demo-section section-pad wrap"
+        id="demo"
+        aria-labelledby="demo-title"
+      >
+        <div class="demo-window">
+          <div class="window-bar">
+            <span class="technical">Fictional feed preview</span
+            ><svg class="icon" aria-hidden="true"><use href="#i-shield" /></svg>
+          </div>
+          <div class="feed" id="demo-feed">
+            <div class="feed-meta">
+              <span class="feed-avatar" aria-hidden="true">P</span>
+              <div>
+                <strong>Player's journal</strong><span>Example post</span>
+              </div>
+            </div>
+            <div class="feed-content" id="demo-card" data-mode="blur">
+              <div class="fictional-post" id="fictional-post">
+                <div class="demo-thumbnail">
+                  <div class="fictional-landscape" aria-hidden="true"></div>
+                  <button class="reveal-button" id="reveal-demo" type="button">
+                    Reveal Content
+                  </button>
+                </div>
+                <h3 id="fictional-title">Spoilence Protected - GTA 6 Leak</h3>
+                <p>Player's journal · 24K views · 12:42</p>
+              </div>
+            </div>
+          </div>
+          <div class="demo-foot">
+            <span id="demo-state" role="status" aria-live="polite"
+              >Blur mode · Thumbnail and title protected</span
+            ><button type="button" id="reset-demo" class="text-button" hidden>
+              Conceal again
+            </button>
+          </div>
+          <div class="demo-switcher">
+            <span>Concealment mode</span>
+            <div
+              class="segmented"
+              role="group"
+              aria-label="Demo concealment mode"
+            >
+              <button type="button" id="mode-blur" aria-pressed="true">
+                Blur</button
+              ><button type="button" id="mode-hide" aria-pressed="false">
+                Hide
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="section-copy">
+          <p class="section-number technical">01 / The shield</p>
+          <h2 id="demo-title">
+            Less plot.<br /><span class="type-outline">More play.</span>
+          </h2>
+          <p>
+            The everyday scroll can give away more than you asked for. Spoilence
+            looks for potential GTA VI spoilers on supported YouTube, Instagram
+            and TikTok layouts, then hides the item or protects its details.
+          </p>
+          <div class="mode-explainer">
+            <h3>Hide the whole item.</h3>
+            <p>
+              The item disappears completely. No bar, placeholder or leftover
+              gap.
+            </p>
+            <h3>Keep the space. Blur the details.</h3>
+            <p>
+              The thumbnail is blurred and the title becomes a generic line.
+              Time, views and channel name stay visible on supported layouts.
+            </p>
+          </div>
+          <p class="small-note">
+            Try both modes. This is a visual demo, not live detection. Some
+            spoilers can still get through.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="privacy-section"
+        id="privacy"
+        aria-labelledby="privacy-title"
+      >
+        <div class="wrap privacy-grid section-pad">
+          <div>
+            <p class="section-number technical">02 / Privacy</p>
+            <h2 id="privacy-title">
+              Your browser.<br /><span class="type-outline"
+                >Your business.</span
+              >
+            </h2>
+            <a class="quiet-link" href="/privacy.html"
+              >Read the privacy details <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="privacy-facts">
+            <article>
+              <svg class="fact-symbol icon" aria-hidden="true">
+                <use href="#i-device" />
+              </svg>
+              <div>
+                <h3>Detection stays with you.</h3>
+                <p>
+                  Rules run inside your browser. No cloud inference. No
+                  detection-related network requests.
+                </p>
+              </div>
+            </article>
+            <article>
+              <svg class="fact-symbol icon" aria-hidden="true">
+                <use href="#i-clock" />
+              </svg>
+              <div>
+                <h3>A short memory. By design.</h3>
+                <p>
+                  Decisions live in memory for at most 24 hours. Raw browsing
+                  content is never saved by Spoilence.
+                </p>
+              </div>
+            </article>
+            <article>
+              <svg class="fact-symbol icon" aria-hidden="true">
+                <use href="#i-user-off" />
+              </svg>
+              <div>
+                <h3>No account. No audience profile.</h3>
+                <p>
+                  No product analytics, telemetry or tracking scripts. Your
+                  settings are yours to reset.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="install-section section-pad wrap"
+        id="install"
+        aria-labelledby="install-title"
+      >
+        <div class="install-heading">
+          <div>
+            <p class="section-number technical">03 / Get Spoilence</p>
+            <h2 id="install-title">
+              Keep browsing.<br /><span class="type-outline"
+                >Keep it yours.</span
+              >
+            </h2>
+          </div>
+          <p>
+            One browser. One small download.<br />Choose your browser for the
+            right steps.
+          </p>
+        </div>
+        <div class="install-panel">
+          <div class="download-panel">
+            <label for="browser-select">Your desktop browser</label
+            ><select id="browser-select" name="browser" autocomplete="off">
+              <option value="chromium">Chrome-type browser</option>
+              <option value="firefox">Firefox-type browser</option>
+              <option value="safari">Safari on Mac</option>
+            </select>
+            <p
+              id="browser-status"
+              class="browser-status"
+              role="status"
+              aria-live="polite"
+            >
+              Select your browser for matching setup.
+            </p>
+            <a
+              class="button button-dark download-button"
+              href="/download.html#chrome"
+              data-download-browser="chrome"
+              >Download for your browser<svg class="icon" aria-hidden="true">
+                <use href="#i-download" /></svg
+            ></a>
+            <p id="download-name" class="download-meta">spoilence_chrome.zip</p>
+            <p class="download-meta">
+              <span data-download-size>Browser-specific</span> ZIP · v<span
+                data-version
+                >0.2.0</span
+              >
+              · No installer
+            </p>
+            <p class="install-warning" id="platform-note">
+              This is a development build. Browser approval is required.
+            </p>
+            <details class="integrity-details">
+              <summary>Verify your download</summary>
+              <p>SHA-256 of the full ZIP:</p>
+              <code id="download-hash"
+                >See the included package information.</code
+              >
+            </details>
+          </div>
+          <div class="setup-panel">
+            <div class="setup-panel-heading">
+              <span class="folder-tag technical" id="family-label"
+                >spoilence_chrome /</span
+              ><span>Developer installation</span>
+            </div>
+            <ol id="install-steps">
+              <li><strong>Download</strong> spoilence_chrome.zip and <strong>Extract</strong> it to a permanent folder.</li>
+              <li><strong>Paste the address</strong> below into a new tab.
+                <div class="settings-tools" id="settings-tools">
+                  <label for="settings-url">Paste in your browser address bar</label>
+                  <div class="copy-row"><input id="settings-url" name="settings-url" value="chrome://extensions/" readonly spellcheck="false" autocomplete="off" /><button id="copy-settings" type="button">Copy</button></div>
+                </div>
+              </li>
+              <li>In the browser extensions page, enable <strong>Developer mode</strong> ? choose <strong>Load unpacked</strong> ? select the <strong>extracted folder</strong> you downloaded.</li>
+            </ol>
+            <p
+              id="setup-feedback"
+              class="setup-feedback"
+              role="status"
+              aria-live="polite"
+            ></p>
+            <p class="setup-limit" id="setup-limit">
+              Keep the extracted extension folder where you loaded it.
+            </p>
+          </div>
+        </div>
+        <div class="site-coverage">
+          <span class="technical">Protects supported layouts on</span>
+          <p>
+            YouTube <span aria-hidden="true">/</span> Instagram
+            <span aria-hidden="true">/</span> TikTok
+          </p>
+          <span
+            >Text &amp; accessible metadata. No audio or video analysis.</span
+          >
+        </div>
+      </section>
+
+      <section
+        class="faq-section wrap section-pad"
+        id="questions"
+        aria-labelledby="faq-title"
+      >
+        <div>
+          <p class="section-number technical">04 / Questions</p>
+          <h2 id="faq-title">Before you<br />head back out.</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>
+              Will it catch every spoiler?<svg class="icon" aria-hidden="true">
+                <use href="#i-plus" />
+              </svg>
+            </summary>
+            <p>
+              No. Image-only spoilers, unsupported languages and changed page
+              layouts can get through. Spoilence currently uses local text rules
+              and accessible metadata. OCR and image classifiers are not
+              enabled.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Does it work in Opera GX and Brave?<svg
+                class="icon"
+                aria-hidden="true"
+              >
+                <use href="#i-plus" />
+              </svg>
+            </summary>
+            <p>
+              The Chromium bundle includes setup routes for Brave, Opera, Opera
+              GX, Vivaldi, Chrome and Edge. These browsers share extension APIs,
+              but individual fork testing is still pending. Installed Chromium,
+              Edge and Firefox have prior synthetic validation. Compatible does
+              not mean individually certified.
+            </p>
+          </details>
+          <details>
+            <summary>
+              What about Safari or mobile?<svg class="icon" aria-hidden="true">
+                <use href="#i-plus" />
+              </svg>
+            </summary>
+            <p>
+              Mac Safari 18.4 or later has a temporary folder-install route.
+              Actual Mac Safari testing is still pending. This release is for
+              desktop browsers. There is no mobile app, APK, IPA or executable
+              installer.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Why does Firefox need loading again?<svg
+                class="icon"
+                aria-hidden="true"
+              >
+                <use href="#i-plus" />
+              </svg>
+            </summary>
+            <p>
+              This is an unsigned development extension. Firefox's temporary
+              add-on loader removes it when the browser closes. A signed release
+              would change that installation path; one is not available in this
+              package.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Can I switch it off and clear its data?<svg
+                class="icon"
+                aria-hidden="true"
+              >
+                <use href="#i-plus" />
+              </svg>
+            </summary>
+            <p>
+              Yes. Open the extension's controls to switch protection off,
+              change sensitivity, configure sites or reset local data. OFF
+              clears decisions and restores content. After removing or
+              externally disabling the extension, reload open tabs to remove any
+              injected covers.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section class="closing-section wrap">
+        <h2>Your feed.<br />Your controls.</h2>
+        <p>
+          Change modes, adjust sensitivity or turn protection off whenever you
+          choose. Detection stays on your device.
+        </p>
+        <a class="quiet-link" href="/privacy.html"
+          >Read how your data stays local</a
+        >
+      </section>
+    </main>
+    <footer class="site-footer wrap">
+      <div>
+        <a class="wordmark" href="/">spoilence</a>
+        <p>
+          An independent project. Not affiliated with Rockstar Games.<br />Grand
+          Theft Auto and GTA are trademarks of their respective owners.<br />GTA
+          VI artwork: Rockstar Games. All rights reserved.
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="/terms.html">Terms</a><a href="/privacy.html">Privacy</a
+        ><a href="#questions">Questions</a
+        ><a href="/downloads/package-info.json">Package details</a
+        ><span>© <span id="year">2026</span> Spoilence</span>
+      </div>
+    </footer>
+    <noscript
+      ><p class="noscript-note wrap">
+        JavaScript enhances the artwork, demo and browser matching. Downloads
+        still work. Extract the named ZIP and load its folder directly. Firefox
+        temporarily loads manifest.json inside that folder. Mac Safari 18.4+ can
+        temporarily load the extracted folder through Developer settings. No
+        mobile setup is included.
+        <a href="#install">Choose your browser and review setup</a>
+      </p></noscript
+    >
+  </body>
+</html>

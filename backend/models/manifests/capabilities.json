@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "staticImageOcr": false,
+  "imageClassifier": false,
+  "runtimeDownloads": false,
+  "reason": "No validated bundled provider; incremental-value and device-performance gates open"
+}

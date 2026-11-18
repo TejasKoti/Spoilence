@@ -1,0 +1,133 @@
+{
+  "families": {
+    "chromium": {
+      "label": "Chrome-type browsers",
+      "minimum": "Chromium 120",
+      "source": "build/extensions/chromium"
+    },
+    "firefox": {
+      "label": "Firefox-type browsers",
+      "minimum": "Firefox 121",
+      "source": "build/extensions/firefox"
+    },
+    "safari": {
+      "label": "Safari",
+      "minimum": "macOS Safari 18.4 for temporary installation",
+      "source": "build/extensions/safari"
+    }
+  },
+  "browsers": [
+    {
+      "id": "chrome",
+      "name": "Google Chrome",
+      "family": "chromium",
+      "settings": "chrome://extensions/",
+      "validation": "Chromium engine tested; branded Chrome pending"
+    },
+    {
+      "id": "edge",
+      "name": "Microsoft Edge",
+      "family": "chromium",
+      "settings": "edge://extensions/",
+      "validation": "Installed Edge tested"
+    },
+    {
+      "id": "brave",
+      "name": "Brave",
+      "family": "chromium",
+      "settings": "brave://extensions/",
+      "validation": "Compatible route; browser runtime pending"
+    },
+    {
+      "id": "opera",
+      "name": "Opera",
+      "family": "chromium",
+      "settings": "opera://extensions/",
+      "validation": "Compatible route; browser runtime pending"
+    },
+    {
+      "id": "opera-gx",
+      "name": "Opera GX",
+      "family": "chromium",
+      "settings": "opera://extensions/",
+      "validation": "Compatible route; browser runtime pending"
+    },
+    {
+      "id": "vivaldi",
+      "name": "Vivaldi",
+      "family": "chromium",
+      "settings": "vivaldi://extensions/",
+      "validation": "Compatible route; browser runtime pending"
+    },
+    {
+      "id": "chromium",
+      "name": "Chromium / other Chrome-compatible browser",
+      "family": "chromium",
+      "settings": "chrome://extensions/",
+      "validation": "Chromium tested; other forks require individual checks"
+    },
+    {
+      "id": "firefox",
+      "name": "Mozilla Firefox",
+      "family": "firefox",
+      "settings": "about:debugging#/runtime/this-firefox",
+      "validation": "Installed Firefox tested"
+    },
+    {
+      "id": "firefox-esr",
+      "name": "Firefox ESR",
+      "family": "firefox",
+      "settings": "about:debugging#/runtime/this-firefox",
+      "validation": "Compatible route; ESR runtime pending"
+    },
+    {
+      "id": "firefox-developer",
+      "name": "Firefox Developer Edition / Nightly",
+      "family": "firefox",
+      "settings": "about:debugging#/runtime/this-firefox",
+      "validation": "Compatible route; browser runtime pending"
+    },
+    {
+      "id": "librewolf",
+      "name": "LibreWolf",
+      "family": "firefox",
+      "settings": "about:debugging#/runtime/this-firefox",
+      "validation": "Compatibility candidate; runtime pending"
+    },
+    {
+      "id": "waterfox",
+      "name": "Waterfox",
+      "family": "firefox",
+      "settings": "about:debugging#/runtime/this-firefox",
+      "validation": "Compatibility candidate; runtime pending"
+    },
+    {
+      "id": "zen",
+      "name": "Zen Browser",
+      "family": "firefox",
+      "settings": "about:debugging#/runtime/this-firefox",
+      "validation": "Compatibility candidate; runtime pending"
+    },
+    {
+      "id": "floorp",
+      "name": "Floorp",
+      "family": "firefox",
+      "settings": "about:debugging#/runtime/this-firefox",
+      "validation": "Compatibility candidate; runtime pending"
+    },
+    {
+      "id": "gecko",
+      "name": "Other Firefox-compatible browser",
+      "family": "firefox",
+      "settings": "about:debugging#/runtime/this-firefox",
+      "validation": "Requires Firefox 121+ WebExtension compatibility; runtime pending"
+    },
+    {
+      "id": "safari",
+      "name": "Safari on Mac",
+      "family": "safari",
+      "settings": "",
+      "validation": "Temporary install documented; actual Mac Safari runtime pending"
+    }
+  ]
+}

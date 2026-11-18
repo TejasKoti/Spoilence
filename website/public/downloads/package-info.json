@@ -1,0 +1,484 @@
+{
+  "name": "Spoilence",
+  "version": "0.3.2",
+  "standalone": true,
+  "browserOnly": true,
+  "developmentBuild": true,
+  "requiresBrowserConsent": true,
+  "families": {
+    "chromium": {
+      "label": "Chrome-type browsers",
+      "minimum": "Chromium 120"
+    },
+    "firefox": {
+      "label": "Firefox-type browsers",
+      "minimum": "Firefox 121"
+    },
+    "safari": {
+      "label": "Safari",
+      "minimum": "macOS Safari 18.4 for temporary installation"
+    }
+  },
+  "browsers": [
+    {
+      "id": "chrome",
+      "name": "Google Chrome",
+      "family": "chromium",
+      "settings": "chrome://extensions/",
+      "validation": "Chromium engine tested; branded Chrome pending"
+    },
+    {
+      "id": "edge",
+      "name": "Microsoft Edge",
+      "family": "chromium",
+      "settings": "edge://extensions/",
+      "validation": "Installed Edge tested"
+    },
+    {
+      "id": "brave",
+      "name": "Brave",
+      "family": "chromium",
+      "settings": "brave://extensions/",
+      "validation": "Compatible route; browser runtime pending"
+    },
+    {
+      "id": "opera",
+      "name": "Opera",
+      "family": "chromium",
+      "settings": "opera://extensions/",
+      "validation": "Compatible route; browser runtime pending"
+    },
+    {
+      "id": "opera-gx",
+      "name": "Opera GX",
+      "family": "chromium",
+      "settings": "opera://extensions/",
+      "validation": "Compatible route; browser runtime pending"
+    },
+    {
+      "id": "vivaldi",
+      "name": "Vivaldi",
+      "family": "chromium",
+      "settings": "vivaldi://extensions/",
+      "validation": "Compatible route; browser runtime pending"
+    },
+    {
+      "id": "chromium",
+      "name": "Chromium / other Chrome-compatible browser",
+      "family": "chromium",
+      "settings": "chrome://extensions/",
+      "validation": "Chromium tested; other forks require individual checks"
+    },
+    {
+      "id": "firefox",
+      "name": "Mozilla Firefox",
+      "family": "firefox",
+      "settings": "about:debugging#/runtime/this-firefox",
+      "validation": "Installed Firefox tested"
+    },
+    {
+      "id": "firefox-esr",
+      "name": "Firefox ESR",
+      "family": "firefox",
+      "settings": "about:debugging#/runtime/this-firefox",
+      "validation": "Compatible route; ESR runtime pending"
+    },
+    {
+      "id": "firefox-developer",
+      "name": "Firefox Developer Edition / Nightly",
+      "family": "firefox",
+      "settings": "about:debugging#/runtime/this-firefox",
+      "validation": "Compatible route; browser runtime pending"
+    },
+    {
+      "id": "librewolf",
+      "name": "LibreWolf",
+      "family": "firefox",
+      "settings": "about:debugging#/runtime/this-firefox",
+      "validation": "Compatibility candidate; runtime pending"
+    },
+    {
+      "id": "waterfox",
+      "name": "Waterfox",
+      "family": "firefox",
+      "settings": "about:debugging#/runtime/this-firefox",
+      "validation": "Compatibility candidate; runtime pending"
+    },
+    {
+      "id": "zen",
+      "name": "Zen Browser",
+      "family": "firefox",
+      "settings": "about:debugging#/runtime/this-firefox",
+      "validation": "Compatibility candidate; runtime pending"
+    },
+    {
+      "id": "floorp",
+      "name": "Floorp",
+      "family": "firefox",
+      "settings": "about:debugging#/runtime/this-firefox",
+      "validation": "Compatibility candidate; runtime pending"
+    },
+    {
+      "id": "gecko",
+      "name": "Other Firefox-compatible browser",
+      "family": "firefox",
+      "settings": "about:debugging#/runtime/this-firefox",
+      "validation": "Requires Firefox 121+ WebExtension compatibility; runtime pending"
+    },
+    {
+      "id": "safari",
+      "name": "Safari on Mac",
+      "family": "safari",
+      "settings": "",
+      "validation": "Temporary install documented; actual Mac Safari runtime pending"
+    }
+  ],
+  "downloads": {
+    "chrome": {
+      "filename": "spoilence_chrome.zip",
+      "path": "chromium/spoilence_chrome.zip",
+      "folder": "spoilence_chrome",
+      "family": "chromium",
+      "bytes": 80706,
+      "sha256": "70832b0d4e35295aca68f9974002867e721488e0f431a7e05d04a0cd4976778c"
+    },
+    "edge": {
+      "filename": "spoilence_edge.zip",
+      "path": "chromium/spoilence_edge.zip",
+      "folder": "spoilence_edge",
+      "family": "chromium",
+      "bytes": 80706,
+      "sha256": "70832b0d4e35295aca68f9974002867e721488e0f431a7e05d04a0cd4976778c"
+    },
+    "brave": {
+      "filename": "spoilence_brave.zip",
+      "path": "chromium/spoilence_brave.zip",
+      "folder": "spoilence_brave",
+      "family": "chromium",
+      "bytes": 80706,
+      "sha256": "70832b0d4e35295aca68f9974002867e721488e0f431a7e05d04a0cd4976778c"
+    },
+    "opera": {
+      "filename": "spoilence_opera.zip",
+      "path": "chromium/spoilence_opera.zip",
+      "folder": "spoilence_opera",
+      "family": "chromium",
+      "bytes": 80706,
+      "sha256": "70832b0d4e35295aca68f9974002867e721488e0f431a7e05d04a0cd4976778c"
+    },
+    "opera-gx": {
+      "filename": "spoilence_opera-gx.zip",
+      "path": "chromium/spoilence_opera-gx.zip",
+      "folder": "spoilence_opera-gx",
+      "family": "chromium",
+      "bytes": 80706,
+      "sha256": "70832b0d4e35295aca68f9974002867e721488e0f431a7e05d04a0cd4976778c"
+    },
+    "vivaldi": {
+      "filename": "spoilence_vivaldi.zip",
+      "path": "chromium/spoilence_vivaldi.zip",
+      "folder": "spoilence_vivaldi",
+      "family": "chromium",
+      "bytes": 80706,
+      "sha256": "70832b0d4e35295aca68f9974002867e721488e0f431a7e05d04a0cd4976778c"
+    },
+    "chromium": {
+      "filename": "spoilence_chromium.zip",
+      "path": "chromium/spoilence_chromium.zip",
+      "folder": "spoilence_chromium",
+      "family": "chromium",
+      "bytes": 80706,
+      "sha256": "70832b0d4e35295aca68f9974002867e721488e0f431a7e05d04a0cd4976778c"
+    },
+    "firefox": {
+      "filename": "spoilence_firefox.zip",
+      "path": "firefox/spoilence_firefox.zip",
+      "folder": "spoilence_firefox",
+      "family": "firefox",
+      "bytes": 80441,
+      "sha256": "0afd030fd33924da08855dbb5ee4702b7b12e1ce6331875acf82d99ec71784ec"
+    },
+    "firefox-esr": {
+      "filename": "spoilence_firefox-esr.zip",
+      "path": "firefox/spoilence_firefox-esr.zip",
+      "folder": "spoilence_firefox-esr",
+      "family": "firefox",
+      "bytes": 80441,
+      "sha256": "0afd030fd33924da08855dbb5ee4702b7b12e1ce6331875acf82d99ec71784ec"
+    },
+    "firefox-developer": {
+      "filename": "spoilence_firefox-developer.zip",
+      "path": "firefox/spoilence_firefox-developer.zip",
+      "folder": "spoilence_firefox-developer",
+      "family": "firefox",
+      "bytes": 80441,
+      "sha256": "0afd030fd33924da08855dbb5ee4702b7b12e1ce6331875acf82d99ec71784ec"
+    },
+    "librewolf": {
+      "filename": "spoilence_librewolf.zip",
+      "path": "firefox/spoilence_librewolf.zip",
+      "folder": "spoilence_librewolf",
+      "family": "firefox",
+      "bytes": 80441,
+      "sha256": "0afd030fd33924da08855dbb5ee4702b7b12e1ce6331875acf82d99ec71784ec"
+    },
+    "waterfox": {
+      "filename": "spoilence_waterfox.zip",
+      "path": "firefox/spoilence_waterfox.zip",
+      "folder": "spoilence_waterfox",
+      "family": "firefox",
+      "bytes": 80441,
+      "sha256": "0afd030fd33924da08855dbb5ee4702b7b12e1ce6331875acf82d99ec71784ec"
+    },
+    "zen": {
+      "filename": "spoilence_zen.zip",
+      "path": "firefox/spoilence_zen.zip",
+      "folder": "spoilence_zen",
+      "family": "firefox",
+      "bytes": 80441,
+      "sha256": "0afd030fd33924da08855dbb5ee4702b7b12e1ce6331875acf82d99ec71784ec"
+    },
+    "floorp": {
+      "filename": "spoilence_floorp.zip",
+      "path": "firefox/spoilence_floorp.zip",
+      "folder": "spoilence_floorp",
+      "family": "firefox",
+      "bytes": 80441,
+      "sha256": "0afd030fd33924da08855dbb5ee4702b7b12e1ce6331875acf82d99ec71784ec"
+    },
+    "gecko": {
+      "filename": "spoilence_gecko.zip",
+      "path": "firefox/spoilence_gecko.zip",
+      "folder": "spoilence_gecko",
+      "family": "firefox",
+      "bytes": 80441,
+      "sha256": "0afd030fd33924da08855dbb5ee4702b7b12e1ce6331875acf82d99ec71784ec"
+    },
+    "safari": {
+      "filename": "spoilence_safari.zip",
+      "path": "safari/spoilence_safari.zip",
+      "folder": "spoilence_safari",
+      "family": "safari",
+      "bytes": 80353,
+      "sha256": "192a438df0718d1aee77603bab903819de4d2e9c391463dce4e9bfc2f2127bfe"
+    }
+  },
+  "payloads": {
+    "chromium": [
+      {
+        "path": "background.js",
+        "bytes": 278,
+        "sha256": "f70ca6d2161b3b4d221181611d73bcb6878dbba9e7998787c9228d8d24f8b872"
+      },
+      {
+        "path": "content.js",
+        "bytes": 25442,
+        "sha256": "8154769b2d5074aefded642ee450be77941910b20f624d16f8a7e57360236584"
+      },
+      {
+        "path": "fonts/BigShouldersDisplay-LICENSE.txt",
+        "bytes": 4396,
+        "sha256": "338f9c050f19daeda1d597243faf79f3a3d437c338af58cb7047617d0ce08771"
+      },
+      {
+        "path": "fonts/BigShouldersDisplayVariable.woff2",
+        "bytes": 35436,
+        "sha256": "698f9960927e7b5a0c38e5bf388cd0a6e42d855062fe70366cf5057664e39401"
+      },
+      {
+        "path": "guard.css",
+        "bytes": 976,
+        "sha256": "abbd1981b6b429f4e882747cc90c9f92023ab874beed5478089474efa64d2b6c"
+      },
+      {
+        "path": "guard.js",
+        "bytes": 134,
+        "sha256": "163ef19997028485d337dd0f4b81e7ad52a2c3f9eaec40284f54e2bf5ca5b245"
+      },
+      {
+        "path": "icons/icon-128.png",
+        "bytes": 16089,
+        "sha256": "304154539d3f672572c4cf81736bbc920a2921dcdf58fd6e89e75374096d8ee5"
+      },
+      {
+        "path": "icons/icon-16.png",
+        "bytes": 834,
+        "sha256": "7d5e1d8d71ffa75cd33c2eb59395fb52914bc166f8ecaebfdf09975e19fe596d"
+      },
+      {
+        "path": "icons/icon-32.png",
+        "bytes": 2087,
+        "sha256": "81ee3b43f08e27aa9e22532c117eb28ba1860b28a2fbddd464a2d3f9f1e1c647"
+      },
+      {
+        "path": "icons/icon-48.png",
+        "bytes": 3737,
+        "sha256": "a6ff1554ed20ce7f57292c64d6bbb1ab6f5c12118788e06c96a80d206f262d36"
+      },
+      {
+        "path": "manifest.json",
+        "bytes": 1672,
+        "sha256": "e4dfdd053c90d810466586910025096331b72a265692582df5c1615d4362a55e"
+      },
+      {
+        "path": "popup.html",
+        "bytes": 9105,
+        "sha256": "78aa2155189567472aab1ee50947b7533551c30cc1ae9f53f46fc3574154b071"
+      },
+      {
+        "path": "ui.css",
+        "bytes": 10604,
+        "sha256": "3010c58597f51f4ecd7f730b8061ecf02582d2451161bfcb955706750532644d"
+      },
+      {
+        "path": "ui.js",
+        "bytes": 7390,
+        "sha256": "b8a0a9b6756c8946be558e8d21365bd15a48f0deaa9ed1a26b04b4b0b469ee81"
+      }
+    ],
+    "firefox": [
+      {
+        "path": "background.js",
+        "bytes": 278,
+        "sha256": "f70ca6d2161b3b4d221181611d73bcb6878dbba9e7998787c9228d8d24f8b872"
+      },
+      {
+        "path": "content.js",
+        "bytes": 25442,
+        "sha256": "8154769b2d5074aefded642ee450be77941910b20f624d16f8a7e57360236584"
+      },
+      {
+        "path": "fonts/BigShouldersDisplay-LICENSE.txt",
+        "bytes": 4396,
+        "sha256": "338f9c050f19daeda1d597243faf79f3a3d437c338af58cb7047617d0ce08771"
+      },
+      {
+        "path": "fonts/BigShouldersDisplayVariable.woff2",
+        "bytes": 35436,
+        "sha256": "698f9960927e7b5a0c38e5bf388cd0a6e42d855062fe70366cf5057664e39401"
+      },
+      {
+        "path": "guard.css",
+        "bytes": 976,
+        "sha256": "abbd1981b6b429f4e882747cc90c9f92023ab874beed5478089474efa64d2b6c"
+      },
+      {
+        "path": "guard.js",
+        "bytes": 134,
+        "sha256": "163ef19997028485d337dd0f4b81e7ad52a2c3f9eaec40284f54e2bf5ca5b245"
+      },
+      {
+        "path": "icons/icon-128.png",
+        "bytes": 16089,
+        "sha256": "304154539d3f672572c4cf81736bbc920a2921dcdf58fd6e89e75374096d8ee5"
+      },
+      {
+        "path": "icons/icon-16.png",
+        "bytes": 834,
+        "sha256": "7d5e1d8d71ffa75cd33c2eb59395fb52914bc166f8ecaebfdf09975e19fe596d"
+      },
+      {
+        "path": "icons/icon-32.png",
+        "bytes": 2087,
+        "sha256": "81ee3b43f08e27aa9e22532c117eb28ba1860b28a2fbddd464a2d3f9f1e1c647"
+      },
+      {
+        "path": "icons/icon-48.png",
+        "bytes": 3737,
+        "sha256": "a6ff1554ed20ce7f57292c64d6bbb1ab6f5c12118788e06c96a80d206f262d36"
+      },
+      {
+        "path": "manifest.json",
+        "bytes": 1505,
+        "sha256": "5ea625a909ab33c26e6713ca620d06fc37523d90b21f1fd410a8ec777a2c19bc"
+      },
+      {
+        "path": "popup.html",
+        "bytes": 9105,
+        "sha256": "78aa2155189567472aab1ee50947b7533551c30cc1ae9f53f46fc3574154b071"
+      },
+      {
+        "path": "ui.css",
+        "bytes": 10604,
+        "sha256": "3010c58597f51f4ecd7f730b8061ecf02582d2451161bfcb955706750532644d"
+      },
+      {
+        "path": "ui.js",
+        "bytes": 7390,
+        "sha256": "b8a0a9b6756c8946be558e8d21365bd15a48f0deaa9ed1a26b04b4b0b469ee81"
+      }
+    ],
+    "safari": [
+      {
+        "path": "background.js",
+        "bytes": 278,
+        "sha256": "f70ca6d2161b3b4d221181611d73bcb6878dbba9e7998787c9228d8d24f8b872"
+      },
+      {
+        "path": "content.js",
+        "bytes": 25442,
+        "sha256": "8154769b2d5074aefded642ee450be77941910b20f624d16f8a7e57360236584"
+      },
+      {
+        "path": "fonts/BigShouldersDisplay-LICENSE.txt",
+        "bytes": 4396,
+        "sha256": "338f9c050f19daeda1d597243faf79f3a3d437c338af58cb7047617d0ce08771"
+      },
+      {
+        "path": "fonts/BigShouldersDisplayVariable.woff2",
+        "bytes": 35436,
+        "sha256": "698f9960927e7b5a0c38e5bf388cd0a6e42d855062fe70366cf5057664e39401"
+      },
+      {
+        "path": "guard.css",
+        "bytes": 976,
+        "sha256": "abbd1981b6b429f4e882747cc90c9f92023ab874beed5478089474efa64d2b6c"
+      },
+      {
+        "path": "guard.js",
+        "bytes": 134,
+        "sha256": "163ef19997028485d337dd0f4b81e7ad52a2c3f9eaec40284f54e2bf5ca5b245"
+      },
+      {
+        "path": "icons/icon-128.png",
+        "bytes": 16089,
+        "sha256": "304154539d3f672572c4cf81736bbc920a2921dcdf58fd6e89e75374096d8ee5"
+      },
+      {
+        "path": "icons/icon-16.png",
+        "bytes": 834,
+        "sha256": "7d5e1d8d71ffa75cd33c2eb59395fb52914bc166f8ecaebfdf09975e19fe596d"
+      },
+      {
+        "path": "icons/icon-32.png",
+        "bytes": 2087,
+        "sha256": "81ee3b43f08e27aa9e22532c117eb28ba1860b28a2fbddd464a2d3f9f1e1c647"
+      },
+      {
+        "path": "icons/icon-48.png",
+        "bytes": 3737,
+        "sha256": "a6ff1554ed20ce7f57292c64d6bbb1ab6f5c12118788e06c96a80d206f262d36"
+      },
+      {
+        "path": "manifest.json",
+        "bytes": 1267,
+        "sha256": "f0b12e0d54a05d5ba560b2aadd6d98d899aafb825bebd4782bba705f42de2638"
+      },
+      {
+        "path": "popup.html",
+        "bytes": 9105,
+        "sha256": "78aa2155189567472aab1ee50947b7533551c30cc1ae9f53f46fc3574154b071"
+      },
+      {
+        "path": "ui.css",
+        "bytes": 10604,
+        "sha256": "3010c58597f51f4ecd7f730b8061ecf02582d2451161bfcb955706750532644d"
+      },
+      {
+        "path": "ui.js",
+        "bytes": 7390,
+        "sha256": "b8a0a9b6756c8946be558e8d21365bd15a48f0deaa9ed1a26b04b4b0b469ee81"
+      }
+    ]
+  }
+}

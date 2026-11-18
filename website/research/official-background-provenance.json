@@ -1,0 +1,55 @@
+{
+  "reviewed": "2026-11-17",
+  "sourceGallery": "https://www.rockstargames.com/VI/media/screenshots",
+  "recommended": "Vice City 03",
+  "images": [
+    {
+      "title": "Vice City 03",
+      "studyFile": "vice-city-03-official-study.jpg",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 440266,
+      "sha256": "06a4497925af19d509ac50f3be40d46f274aa5e28dc4ae8529d9523132cff195",
+      "source": "https://www.rockstargames.com/VI/_next/static/media/Vice_City_03.0nqz~lrqdmlze.jpg?akim=1&imdensity=1&imwidth=1920",
+      "copyright": "Rockstar Games",
+      "originalSpoilenceArtwork": false,
+      "openLicenseClaimed": false
+    },
+    {
+      "title": "Leonida Keys 01",
+      "studyFile": "leonida-keys-01-official-study.jpg",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 297322,
+      "sha256": "274f51461fbaf47de705136e3f3c1f6ee2b4a14b55d483ac4a2109875d1f1f39",
+      "source": "https://www.rockstargames.com/VI/_next/static/media/Leonida_Keys_01.0zgz7tveur6y8.jpg?akim=1&imdensity=1&imwidth=1920",
+      "copyright": "Rockstar Games",
+      "originalSpoilenceArtwork": false,
+      "openLicenseClaimed": false
+    },
+    {
+      "title": "Vice City 02",
+      "studyFile": "vice-city-02-official-study.jpg",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 216007,
+      "sha256": "df324a4a6ab543b400e408600b846cf5dcddb82bccfc17c1db68c0c1fc602e59",
+      "source": "https://www.rockstargames.com/VI/_next/static/media/Vice_City_02.0c5.7qx17u9kl.jpg?akim=1&imdensity=1&imwidth=1920",
+      "copyright": "Rockstar Games",
+      "originalSpoilenceArtwork": false,
+      "openLicenseClaimed": false
+    },
+    {
+      "title": "Vice City 04",
+      "studyFile": "vice-city-04-official-study.jpg",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 261520,
+      "sha256": "638b3f3e9d09c3de5b7e22d68fc8717c11fbfbb78ec93ae1e6e70170f6b3818f",
+      "source": "https://www.rockstargames.com/VI/_next/static/media/Vice_City_04.06evqutgh7624.jpg?akim=1&imdensity=1&imwidth=1920",
+      "copyright": "Rockstar Games",
+      "originalSpoilenceArtwork": false,
+      "openLicenseClaimed": false
+    }
+  ]
+}

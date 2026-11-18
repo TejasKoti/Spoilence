@@ -1,0 +1,44 @@
+{
+  "name": "spoilence",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.21.0",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "lint": "cd .. && eslint --config backend/eslint.config.mjs backend tests website/scripts website/public/app.js website/public/reactive-scene.js website/public/browser-picker.js website/public/download-gate.js",
+    "build": "node tools/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "benchmark": "node tools/benchmark-runner/run.mjs",
+    "audit:privacy": "node tools/privacy-audit.mjs",
+    "audit:layout": "node tools/audit-layout.mjs",
+    "test:installed": "node tools/extension-smoke.mjs",
+    "test:firefox-installed": "node tools/firefox-smoke.mjs",
+    "test:edge-installed": "node tools/edge-smoke.mjs",
+    "test:live-layout": "node tools/live-layout-smoke.mjs",
+    "benchmark:browser": "node tools/benchmark-runner/browser.mjs",
+    "test:product": "node --test ../tests/product/standalone.test.mjs",
+    "package": "node tools/package.mjs",
+    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build && pnpm audit:privacy && pnpm audit:layout",
+    "test:website": "playwright test --config ../tests/website/playwright.config.ts"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.65.1",
+    "@types/jsdom": "30.0.0",
+    "@types/node": "26.6.6",
+    "esbuild": "0.28.2",
+    "eslint": "10.15.0",
+    "jsdom": "31.0.1",
+    "pnpm": "12.21.0",
+    "prettier": "3.10.1",
+    "selenium-webdriver": "4.51.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.73.0",
+    "vitest": "5.1.0"
+  }
+}

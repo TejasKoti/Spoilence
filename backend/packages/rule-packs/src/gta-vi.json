@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "topic": "gta-vi",
+  "version": "1.0.0",
+  "aliases": [
+    "gta 6",
+    "gta vi",
+    "gta6",
+    "gtavi",
+    "grand theft auto 6",
+    "grand theft auto vi",
+    "grandtheftautovi",
+    "grandtheftauto6"
+  ],
+  "characterAliases": ["lucia", "jason", "vice city", "leonida"],
+  "riskTerms": [
+    "spoiler",
+    "spoilers",
+    "ending",
+    "finale",
+    "final mission",
+    "plot twist",
+    "betrays",
+    "betrayal",
+    "dies",
+    "death",
+    "killed",
+    "killer",
+    "secret mission",
+    "story leak",
+    "leaked story",
+    "all cutscenes",
+    "cutscene",
+    "boss fight",
+    "walkthrough",
+    "mission revealed"
+  ],
+  "safePhrases": ["spoiler free", "no spoilers", "without spoilers"]
+}

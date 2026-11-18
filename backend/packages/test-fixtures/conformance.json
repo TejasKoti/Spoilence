@@ -1,0 +1,93 @@
+[
+  {
+    "id": "c01",
+    "text": "GTA VI ending: fictional test outcome",
+    "expected": "BLOCK",
+    "contentType": "title"
+  },
+  {
+    "id": "c02",
+    "text": "#GTA6 #spoilers synthetic sample",
+    "expected": "BLOCK",
+    "contentType": "caption"
+  },
+  {
+    "id": "c03",
+    "text": "G.T.A. 6 walkthrough fictional chapter",
+    "expected": "BLOCK",
+    "contentType": "metadata"
+  },
+  {
+    "id": "c04",
+    "text": "GRAND THEFT AUTO VI plot twist (fabricated)",
+    "expected": "BLOCK",
+    "contentType": "comment"
+  },
+  {
+    "id": "c05",
+    "text": "GTA\u200b6 finale fictional test",
+    "expected": "BLOCK",
+    "contentType": "title"
+  },
+  {
+    "id": "c06",
+    "text": "GTA VI spoiler-free hardware review",
+    "expected": "ALLOW",
+    "contentType": "title"
+  },
+  {
+    "id": "c07",
+    "text": "GTA 6 no spoilers performance review",
+    "expected": "ALLOW",
+    "contentType": "title"
+  },
+  {
+    "id": "c08",
+    "text": "GTA 6 spoiler free ending fictional sample",
+    "expected": "BLOCK",
+    "contentType": "comment"
+  },
+  {
+    "id": "c09",
+    "text": "GTA VI controller settings",
+    "expected": "UNCERTAIN",
+    "contentType": "metadata"
+  },
+  {
+    "id": "c10",
+    "text": "Gardening tips and tomato harvest",
+    "expected": "ALLOW",
+    "contentType": "title"
+  },
+  { "id": "c11", "text": "", "expected": "UNCERTAIN", "contentType": "metadata" },
+  {
+    "id": "c12",
+    "text": "GTA 6 endng fictional sample",
+    "expected": "BLOCK",
+    "contentType": "comment"
+  },
+  {
+    "id": "c13",
+    "text": "Lucia cutscene fictional sample",
+    "expected": "BLOCK",
+    "contentType": "caption"
+  },
+  {
+    "id": "c14",
+    "text": "The final mission in an unrelated game",
+    "expected": "ALLOW",
+    "contentType": "title"
+  },
+  {
+    "id": "c15",
+    "text": "ＧＴＡ ６ ｅｎｄｉｎｇ fictional sample",
+    "expected": "BLOCK",
+    "contentType": "title"
+  },
+  {
+    "id": "c16",
+    "text": "GTAVI fictional story leak",
+    "expected": "BLOCK",
+    "contentType": "metadata"
+  }
+]

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Analytics removed for mobile performance (330 KiB saved) -->
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO : balises de l'accueil. Chaque page les remplace via <Seo> (data-rh = gérées par Helmet),
+         et le pré-rendu (scripts/prerender.mjs) les écrit déjà dans le HTML statique de chaque page. -->
+    <meta name="author" content="Christen Dijoux" />
+
+    <!-- Localisation -->
+    <meta name="geo.region" content="CA-QC" />
+    <meta name="geo.placename" content="Saguenay" />
+    <meta name="geo.position" content="48.4167;-71.0667" />
+    <meta name="ICBM" content="48.4167, -71.0667" />
+
+    <!-- Fichiers pour humains et IA -->
+    <link rel="author" href="/humans.txt" />
+    <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM summary" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <meta name="application-name" content="Portfolio | Christen Dijoux" />
+    <meta name="theme-color" content="#050505" />
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" as="image" imagesrcset="/assets/logo-400.webp 400w, /assets/logo-800.webp 800w, /assets/logo.webp 1364w" imagesizes="(max-width: 768px) 400px, (max-width: 1024px) 800px, 1364px" fetchpriority="high" type="image/webp" />
+    <link rel="preconnect" href="https://o4510394913456128.ingest.de.sentry.io" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Polices chargées sans bloquer le premier rendu -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Geist+Mono:wght@400;500&family=Geist:wght@300..600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Geist+Mono:wght@400;500&family=Geist:wght@300..600&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Geist+Mono:wght@400;500&family=Geist:wght@300..600&display=swap" /></noscript>
+
+    <!-- Open Graph / Twitter (accueil ; remplacés par page) -->
+
+    <!-- Données structurées : la personne et le site (communes à toutes les pages) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://christendijoux.com/#person",
+          "name": "Christen Dijoux",
+          "url": "https://christendijoux.com/",
+          "image": "https://christendijoux.com/assets/art/og-cover.png",
+          "jobTitle": "Digital Innovation Specialist — Full-stack & AI Developer",
+          "worksFor": [
+            { "@type": "Organization", "name": "Gagnon Frères" },
+            { "@type": "Organization", "name": "Synaptia Web" }
+          ],
+          "alumniOf": { "@type": "CollegeOrUniversity", "name": "Cégep de Jonquière" },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Saguenay",
+            "addressRegion": "QC",
+            "addressCountry": "CA"
+          },
+          "sameAs": [
+            "https://github.com/Akiyo974",
+            "https://www.linkedin.com/in/christen-dijoux"
+          ],
+          "knowsAbout": [
+            "Full-stack development", "React", "Next.js", "TypeScript", "Node.js", "Python",
+            "WebGL", "GLSL", "GSAP", "Creative coding", "Headless WordPress", "GraphQL",
+            "Applied AI", "Automation", "Power Platform", "Azure", "DevOps", "Cloudflare"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://christendijoux.com/#website",
+          "name": "Christen Dijoux",
+          "url": "https://christendijoux.com/",
+          "inLanguage": ["en", "fr"],
+          "author": { "@id": "https://christendijoux.com/#person" },
+          "description": "Portfolio of Christen Dijoux, full-stack & AI developer: web experiences, headless platforms, internal tools, automation, applied AI — and a lab that dissects every component of the site."
+        }
+      ]
+    }
+    </script>
+
+    
+
+    <style>
+      /* CSS critique : écran de démarrage affiché avant le JavaScript (premier rendu immédiat) */
+      html, body { background-color: #050505; margin: 0; padding: 0; color: #f2f2ee; }
+      .shell { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column; justify-content: space-between;
+        padding: 20px 16px; background: #050505; color: #f2f2ee; font-family: 'Geist Mono', ui-monospace, Consolas, monospace; }
+      .shell-top { display: flex; justify-content: space-between; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; opacity: .6; }
+      .shell-count { font-family: 'Big Shoulders Display', 'Arial Narrow', sans-serif; font-weight: 300; line-height: .78;
+        font-size: clamp(7rem, 26vw, 24rem); font-variant-numeric: tabular-nums; }
+      .shell-bar { margin-top: 16px; height: 1px; background: rgba(242,242,238,.12); }
+      .shell-bar i { display: block; height: 1px; background: #f2f2ee; transform-origin: left; transform: scaleX(0); transition: transform .3s; }
+      .shell-quiet .shell-top, .shell-quiet .shell-count, .shell-quiet .shell-bar { visibility: hidden; }
+      @media (min-width: 768px) { .shell { padding: 32px 40px; } }
+    </style>
+    <script type="module" crossorigin src="/assets/index-CAiB4UuF.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-vendor-Dlt_X9YM.js">
+    <link rel="modulepreload" crossorigin href="/assets/framer-motion-ElnWqFoG.js">
+    <link rel="modulepreload" crossorigin href="/assets/i18n-BAJO6wzl.js">
+    <link rel="modulepreload" crossorigin href="/assets/gsap-vendor-BbtTEKok.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-Dx8f1jHD.css">
+  <link rel="manifest" href="/manifest.webmanifest">    <title>Christen Dijoux — Full-stack &amp; AI Developer | Saguenay, QC</title>
+    <meta name="robots" content="index, follow, max-image-preview:large" data-rh="true">
+    <link rel="canonical" href="https://christendijoux.com/" data-rh="true">
+    <link rel="alternate" hreflang="en" href="https://christendijoux.com/" data-rh="true">
+    <link rel="alternate" hreflang="fr" href="https://christendijoux.com/?lang=fr" data-rh="true">
+    <link rel="alternate" hreflang="x-default" href="https://christendijoux.com/" data-rh="true">
+    <meta property="og:type" content="profile" data-rh="true">
+    <meta property="og:site_name" content="Christen Dijoux" data-rh="true">
+    <meta property="og:locale" content="en_CA" data-rh="true">
+    <meta property="og:url" content="https://christendijoux.com/" data-rh="true">
+    <meta property="og:title" content="Christen Dijoux — Full-stack &amp; AI Developer | Saguenay, QC" data-rh="true">
+    <meta property="og:image" content="https://christendijoux.com/assets/art/og-cover.png" data-rh="true">
+    <meta property="og:image:alt" content="Christen Dijoux — Full-stack &amp; AI Developer | Saguenay, QC" data-rh="true">
+    <meta name="twitter:card" content="summary_large_image" data-rh="true">
+    <meta name="twitter:title" content="Christen Dijoux — Full-stack &amp; AI Developer | Saguenay, QC" data-rh="true">
+    <meta name="twitter:image" content="https://christendijoux.com/assets/art/og-cover.png" data-rh="true">
+    <meta name="twitter:image:alt" content="Christen Dijoux — Full-stack &amp; AI Developer | Saguenay, QC" data-rh="true">
+    <meta name="description" content="Christen Dijoux — full-stack &amp; AI developer in Saguenay, Québec. Web experiences, internal platforms, automation and applied AI. React, Next.js, TypeScript…" data-rh="true">
+    <meta property="og:description" content="Christen Dijoux — full-stack &amp; AI developer in Saguenay, Québec. Web experiences, internal platforms, automation and applied AI. React, Next.js, TypeScript…" data-rh="true">
+    <meta name="twitter:description" content="Christen Dijoux — full-stack &amp; AI developer in Saguenay, Québec. Web experiences, internal platforms, automation and applied AI. React, Next.js, TypeScript…" data-rh="true">
+  </head>
+  <body>
+    <div id="root">
+      <div class="shell" id="shell" role="status" aria-label="Loading">
+        <div class="shell-top"><span>Christen Dijoux — Portfolio</span><span>©2026</span></div>
+        <div>
+          <span class="shell-count" id="shell-count">000</span>
+          <div class="shell-bar"><i id="shell-bar"></i></div>
+        </div>
+      </div>
+      <div class="prerender">
+<p>Christen</p>
+<p>Dijoux</p>
+<p>Saguenay</p>
+<p>Quebec, Canada</p>
+<p>Digital Innovation Specialist</p>
+<p>Software • AI • Cloud • Web</p>
+<p>Local time</p>
+<p>21:51</p>
+<h1>Building</h1>
+<p>I build internal software, AI assistants and automations that save teams time, from prototype to cloud deployment. And I care about their interfaces as much as their code.</p>
+<p>Full-Stack Developer &amp; AI Engineer — 2026</p>
+<p>Software, AI and cloud serving real-world operations.</p>
+<h2>From code to operations</h2>
+<p>Digital innovation specialist at Gagnon Frères, I design and build software end to end: internal platforms, in-store apps, AI assistants and automations. Design is still how I work: an internal tool deserves the same care as an award-winning website.</p>
+<p>My expertise covers modern web development, cloud infrastructure, business-applied artificial intelligence, and process automation. I work on application development, system integration, cloud administration, and infrastructure optimization. On a daily basis, I develop with React, Next.js, TypeScript, Python, and Node.js, while working with Microsoft Dynamics NAV, Power Platform, Azure, Cloudflare, and DigitalOcean environments.</p>
+<p>Passionate about innovation, I am particularly interested in artificial intelligence and AI agents, Machine Learning and data analysis, business process automation, SaaS development, cloud architecture and DevOps, as well as system observability and performance. Through my company Synaptia Web, I also create custom web projects, e-commerce platforms, and AI integrations for organizations looking to accelerate their digital growth.</p>
+<p>Profile</p>
+<p>[ Journey ] · Indian Ocean → Fjord</p>
+<p>From</p>
+<p>La Réunion</p>
+<p>21.11°S · 55.53°E</p>
+<p>Now</p>
+<p>Saguenay, QC</p>
+<p>48.43°N · 71.07°W</p>
+<p>Originally from Réunion Island, now based in Saguenay, Québec. Two ends of the world, one drive: building useful tools and memorable experiences.</p>
+<p>#01 · IA</p>
+<h3>Agents &amp; applied AI</h3>
+<p>Conversational agents, RAG and LLM integrations shipped to production to automate information retrieval and decision-making.</p>
+<p>#02 · OPS</p>
+<h3>Automation &amp; data</h3>
+<p>Python, n8n and Power Automate pipelines that sync catalogs, suppliers and reports — fewer manual tasks, more reliability.</p>
+<p>#03 · CLOUD</p>
+<h3>Cloud &amp; observability</h3>
+<p>Azure, DigitalOcean, Cloudflare and New Relic: deployment, monitoring and alerting for fast, well-watched systems.</p>
+<p>#04 · DESIGN</p>
+<h3>Crafted interfaces</h3>
+<p>Trained in multimedia integration, I keep design at the heart of the code: every tool, internal ones included, gets a clear, accessible and pleasant interface.</p>
+<h3>Skills</h3>
+<p>Stack · 58</p>
+<h4>Development</h4>
+<h4>AI &amp; Data</h4>
+<h4>ERP &amp; Enterprise Systems</h4>
+<h4>Cloud &amp; DevOps</h4>
+<h4>Observability</h4>
+<h4>Automation</h4>
+<p>Areas of Expertise</p>
+<p>Artificial Intelligence &amp; AI Agents/</p>
+<p>Machine Learning &amp; Data Analysis/</p>
+<p>Business Process Automation/</p>
+<p>SaaS &amp; Internal Applications Development/</p>
+<p>Cloud Architecture &amp; DevOps/</p>
+<p>Observability, Monitoring &amp; Performance/</p>
+<p>Enterprise Digital Transformation/</p>
+<h3>Professional Experience</h3>
+<p>Path</p>
+<p>#1 · Feb. 2026 - PresentDigital Innovation SpecialistGagnon FrèresLeading innovation and digital transformation initiatives. Designing custom internal applications, automating data flows (catalogs, suppliers, reports), integrating AI solutions and smart assistants, Power Platform development, monitoring/alerting setup, and infrastructure optimization.Custom internal apps &amp; digital toolsAutomation with Python, n8n, Power AutomateGenerative AI &amp; smart assistants integrationPower Apps, Power BI &amp; Dynamics NAVMonitoring, alerting &amp; observabilityRead moreRead more</p>
+<p>#2 · Apr. 2025 - PresentCo-founder &amp; Web DeveloperSynaptia WebResponsible for web development from design to integration. Creating high-performance showcase sites and online stores with focus on ergonomics, fluidity, and speed. Supporting businesses in their digital transformation.Custom showcase &amp; e-commerce sitesShopify integrationsTechnical optimization &amp; performanceRead moreRead more</p>
+<p>#3 · Mar. - Aug. 2025Full-Stack Developer &amp; DevOpsCTREQComplete redesign of CTREQ website as sole developer. Managing the entire development cycle: Figma design, Next.js/React front-end, WordPress headless back-end (ACF, WPGraphQL), content migration, and server deployment.Next.js + WordPress headless architectureUI/UX design &amp; Figma integrationData migration with WP All ImportDevOps: cPanel, DigitalOcean, optimizationRead moreRead more</p>
+<h4>Education</h4>
+<p>2026Microsoft Pro Badge: GitHub Copilot (Proficient)MicrosoftAI-assisted development, agents and best practices</p>
+<p>2026ChatGPT Prompt Engineering for DevelopersDeepLearning.AI × OpenAILLMs, prompt engineering, AI development</p>
+<p>2025 - 2026Applied Machine Learning &amp; Data Science with PythonCoursera, professional certificateModels, data analysis, Python</p>
+<p>2021 - 2025Multimedia Integration TechniquesCégep de JonquièreFront-end development, UX/UI</p>
+<p>2024Front-End Application Development (React) TrainingedX, in partnership with IBMReact.js, JSX, ES6, Redux, hooks</p>
+<p>2023Video Game Design CertificateCégep de JonquièreLevel design and interactive experience creation</p>
+<h3>Impact &amp; Results</h3>
+<p>Results</p>
+<p>01</p>
+<p>Internal process automation reducing manual tasks at Gagnon Frères</p>
+<p>02</p>
+<p>Production deployment of AI solutions (agents, RAG, OpenAI integrations)</p>
+<p>03</p>
+<p>Implementation of monitoring and observability tools (New Relic, alerting)</p>
+<p>04</p>
+<p>Complete redesign of CTREQ website with headless Next.js architecture (&lt;100ms)</p>
+<p>05</p>
+<p>Creation and launch of Synaptia Web as an independent business</p>
+<p>06</p>
+<p>Power Platform and Dynamics NAV integration to digitize processes</p>
+<h2>Selected Projects</h2>
+<p>Internal software, applied AI, connected devices and a few websites: a selection designed, built and shipped end to end.</p>
+<p>Scroll →</p>
+<h3>Gagnon Frères - Internal software and AI for a retailer</h3>
+<p>Digital innovation specialist in a five-person IT team: I design and build the internal software, applied AI and in-store tools of a Quebec retailer with 7 stores.</p>
+<h3>Badger - Apps and Badge Studio for the GitHub Universe badge</h3>
+<p>The GitHub Universe '26 badge is a real little computer (RP2350, colour screen, MicroPython). I opened it up: new apps, an app store that runs in the browser, and a remote on my Galaxy Watch.</p>
+<h3>AkiWorkspace - Productivity Workspace</h3>
+<p>SaaS application for managing ideas, notes, tasks and projects, with a modern full-stack architecture, hardened security and granular sharing. A collaborative platform inspired by Notion and Linear.</p>
+<h3>CTREQ - Quebec Educational Platform</h3>
+<p>Complete redesign and merger of two WordPress sites (CTREQ + RIRE) into a headless Next.js 13 platform. Structured migration of +10 content types, triple cache architecture (~50ms), advanced SEO and skills transfer plan for client team.</p>
+<h2>The site, taken apart.</h2>
+<p>12 components dissected · 04 experiments</p>
+<p>DitherHeroWebGL→</p>
+<p>Gray-ScottWebGL2→</p>
+<p>NegativeModeEaster egg→</p>
+<h2>Let's work together</h2>
+<h3>Let's Stay in Touch</h3>
+<p>I am always open to new opportunities and collaborations. Feel free to contact me!</p>
+<p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1a5f777b737679726873696e7f74347e7370756f625a7d777b737634797577">[email&#160;protected]</a></p>
+<p>Tel+1 (418) 376-2612</p>
+<p>BaseSaguenay, Québec, Canada</p>
+<nav><a href="/">CD</a> <a href="/lab">NegativeModeEaster egg→</a> <a href="/privacy-policy">Privacy policy</a> <a href="/cv">View Resume</a> <a href="/project/gagnon-freres">Gagnon Frères</a> <a href="/project/badger">View Details</a> <a href="/project/akiworkspace">AkiWorkspace</a> <a href="/project/ctreq">CTREQ</a> <a href="/projects">All Projects · 11View All Projects</a> <a href="/project/ctreq-blog-archive">CTREQ Blog/Archive</a> <a href="/project/innovations-numeriques-fp">Innovations Numériques FP</a> <a href="/legal-notice">Legal notice</a></nav>
+</div>
+    </div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+      // Compteur pendant le chargement du JavaScript ; le préchargeur React reprend à cette valeur
+      (function () {
+        var quiet = false;
+        try { quiet = sessionStorage.getItem('cd-intro-seen') === '1' || matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+        var el = document.getElementById('shell');
+        if (quiet) { el.className += ' shell-quiet'; return; }
+        var c = document.getElementById('shell-count'), bar = document.getElementById('shell-bar'), v = 0;
+        window.__plCount = 0;
+        var id = setInterval(function () {
+          if (!document.getElementById('shell-count')) return clearInterval(id);
+          v = Math.min(60, v + Math.max(1, (60 - v) * 0.08));
+          window.__plCount = v;
+          c.textContent = ('00' + Math.round(v)).slice(-3);
+          bar.style.transform = 'scaleX(' + v / 100 + ')';
+        }, 60);
+      })();
+    </script>
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"829693ebc8204ff7b383de131e0cd1b7","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

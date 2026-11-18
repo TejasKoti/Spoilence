@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en" class="extension-surface">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#080808" />
+    <title>Spoilence</title>
+    <link rel="icon" href="icons/icon-32.png" type="image/png" />
+    <link rel="stylesheet" href="ui.css" />
+  </head>
+  <body>
+    <main>
+      <header class="brand">
+        <img class="brand-logo" src="icons/icon-128.png" alt="" width="56" height="56" />
+        <h1 translate="no">Spoilence</h1>
+        <p>GTA VI spoiler protection <span class="build-version">v__SPOILENCE_VERSION__</span></p>
+      </header>
+      <form id="settings" novalidate>
+        <fieldset id="controls" disabled>
+          <legend class="sr-only">Protection preferences</legend>
+          <label class="protection switch-row" for="enabled">
+            <span
+              ><strong id="protectionTitle">Protection is on</strong
+              ><small>On your device. On your terms.</small></span
+            >
+            <input id="enabled" name="enabled" type="checkbox" role="switch" />
+          </label>
+          <p id="coverage" class="coverage" role="status">Checking this page...</p>
+          <fieldset class="setting mode-setting" aria-describedby="modeHint">
+            <legend>How to conceal spoilers</legend>
+            <div class="mode-options">
+              <label class="mode-option" for="mode-blur">
+                <input id="mode-blur" name="mode" type="radio" value="blur" />
+                <span
+                  ><svg viewBox="0 0 20 20" aria-hidden="true">
+                    <path d="M4 5h12M3 10h14M4 15h12" stroke-dasharray="1 3" /></svg
+                  >Blur</span
+                >
+              </label>
+              <label class="mode-option" for="mode-hide">
+                <input id="mode-hide" name="mode" type="radio" value="hide" />
+                <span
+                  ><svg viewBox="0 0 20 20" aria-hidden="true">
+                    <path
+                      d="M3 3 17 17M8.1 4.2A8.6 8.6 0 0 1 10 4c4.1 0 7 6 7 6a15 15 0 0 1-2.1 3M11.9 15.8A8.6 8.6 0 0 1 10 16c-4.1 0-7-6-7-6a15 15 0 0 1 2.1-3M8 8a2.8 2.8 0 0 0 4 4"
+                    /></svg
+                  >Hide</span
+                >
+              </label>
+            </div>
+            <p id="modeHint" class="hint">
+              Blur the thumbnail and replace its title. Time, views and channel stay visible.
+            </p>
+          </fieldset>
+          <section class="setting sensitivity-setting" aria-labelledby="sensitivityLabel">
+            <label id="sensitivityLabel" for="sensitivity">Sensitivity</label>
+            <div class="sensitivity-control">
+              <div class="range-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+              <input
+                id="sensitivity"
+                name="sensitivity"
+                type="range"
+                min="0"
+                max="2"
+                step="1"
+                value="0"
+                aria-valuetext="Aggressive"
+                aria-describedby="sensitivityHint"
+              />
+            </div>
+            <div class="sensitivity-labels" aria-hidden="true">
+              <span data-level="0">Aggressive</span><span data-level="1">Balanced</span
+              ><span data-level="2">Custom</span>
+            </div>
+            <p id="sensitivityHint" class="hint">Cover likely spoilers and uncertain matches.</p>
+          </section>
+          <section
+            id="thresholdRow"
+            class="threshold-setting"
+            aria-labelledby="thresholdLabel"
+            hidden
+          >
+            <div class="threshold-heading">
+              <label id="thresholdLabel" for="thresholdSlider">Custom risk threshold</label>
+              <label class="sr-only" for="customThreshold">Custom risk threshold value</label>
+              <input
+                id="customThreshold"
+                name="customThreshold"
+                type="number"
+                inputmode="decimal"
+                min="0"
+                max="1"
+                step="0.01"
+                autocomplete="off"
+              />
+            </div>
+            <input
+              id="thresholdSlider"
+              type="range"
+              min="0"
+              max="1"
+              step="0.01"
+              value="0.65"
+              aria-describedby="thresholdHint"
+            />
+            <p id="thresholdHint" class="hint">Lower values conceal more. Choose from 0 to 1.</p>
+          </section>
+          <fieldset class="sites">
+            <legend>Protect these websites</legend>
+            <label class="site-row" for="youtube">
+              <svg class="site-logo" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor" />
+                <path d="m10 9 6 3-6 3z" fill="#080808" />
+              </svg>
+              <span>YouTube</span><input id="youtube" name="youtube" type="checkbox" />
+            </label>
+            <label class="site-row" for="instagram">
+              <svg
+                class="site-logo"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+              <span>Instagram</span><input id="instagram" name="instagram" type="checkbox" />
+            </label>
+            <label class="site-row" for="tiktok">
+              <svg class="site-logo" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                <path
+                  d="M13 3h3a5.8 5.8 0 0 0 5 5.1v3a9 9 0 0 1-5-1.8v7.1A5.6 5.6 0 1 1 10.4 11v3a2.6 2.6 0 1 0 2.6 2.6z"
+                />
+              </svg>
+              <span>TikTok</span><input id="tiktok" name="tiktok" type="checkbox" />
+            </label>
+          </fieldset>
+          <label class="low-power switch-row" for="lowPower">
+            <span
+              ><strong>Low-power mode</strong><small>Process fewer posts at a time.</small></span
+            >
+            <input id="lowPower" name="lowPower" type="checkbox" role="switch" />
+          </label>
+        </fieldset>
+      </form>
+      <p id="status" class="save-status" role="status" aria-live="polite">Loading preferences...</p>
+      <details class="advanced">
+        <summary>Advanced</summary>
+        <div class="detail-body">
+          <p class="hint">Browsing content and raw detection input are never saved to disk.</p>
+          <button id="clear" type="button">Clear local decisions</button>
+          <details>
+            <summary>Import a verified rule pack</summary>
+            <p class="hint">
+              Choose a JSON rule file and a SHA-256 from a trusted independent source. The checksum
+              checks integrity, not its publisher. Nothing is downloaded.
+            </p>
+            <label class="setting" for="ruleFile"
+              >Rule file<input
+                id="ruleFile"
+                name="ruleFile"
+                type="file"
+                accept=".json,application/json"
+            /></label>
+            <label class="setting" for="digest"
+              >Expected SHA-256<input
+                id="digest"
+                name="digest"
+                type="text"
+                maxlength="64"
+                autocomplete="off"
+                spellcheck="false"
+            /></label>
+            <button id="import" type="button">Verify and import</button>
+          </details>
+          <details class="reset">
+            <summary>Reset preferences and imports</summary>
+            <p class="hint">
+              Restore Aggressive + Blur, remove imported rules and clear decisions. This cannot be
+              undone.
+            </p>
+            <button id="fullClear" class="quiet-danger" type="button">Reset all local data</button>
+          </details>
+        </div>
+      </details>
+      <footer>
+        <p>Local detection. No detection network traffic.</p>
+        <details>
+          <summary>Coverage limits</summary>
+          <p>
+            This build checks text and accessible metadata on supported browser websites. Image-only
+            spoilers and changed layouts can be missed. No audio or video analysis.
+          </p>
+        </details>
+      </footer>
+    </main>
+    <dialog id="resetDialog" aria-labelledby="resetHeading">
+      <h2 id="resetHeading">Reset Spoilence?</h2>
+      <p>
+        Remove imported rules and saved preferences, then restore Aggressive + Blur. This cannot be
+        undone.
+      </p>
+      <div class="dialog-actions">
+        <button id="cancelReset" type="button">Keep my settings</button
+        ><button id="confirmReset" class="quiet-danger" type="button">Reset Spoilence</button>
+      </div>
+    </dialog>
+    <script type="module" src="ui.js"></script>
+  </body>
+</html>

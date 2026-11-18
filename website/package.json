@@ -1,0 +1,20 @@
+{
+  "name": "spoilence-website",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "sync:product": "node scripts/sync-product.mjs",
+    "dev": "wrangler dev --ip 127.0.0.1 --port 8787",
+    "preview": "wrangler dev --ip 127.0.0.1 --port 8787",
+    "check:deploy": "wrangler deploy --dry-run --outdir .wrangler/dry-run",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.164.0"
+  }
+}

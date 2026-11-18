@@ -1,0 +1,9 @@
+{
+  "selector": "[data-e2e=\"recommend-list-item-container\"],[data-e2e=\"search_top-item\"],[data-e2e=\"comment-item\"],[data-e2e=\"browse-video-desc\"],article",
+  "metadata": "[title],[aria-label],img[alt],[data-e2e=\"video-desc\"]",
+  "concealment": {
+    "titles": "[data-e2e=\"video-desc\"],[data-e2e=\"browse-video-desc\"],[data-e2e=\"search-card-video-caption\"],[data-e2e=\"comment-level-1\"],[data-e2e=\"comment-level-2\"],[data-e2e=\"comment-content\"],h1,h2,h3",
+    "thumbnails": "img,video",
+    "preserve": "[data-e2e=\"video-author-uniqueid\"],[data-e2e=\"video-author-nickname\"],[data-e2e=\"search-card-user-unique-id\"],[data-e2e=\"video-views\"],[data-e2e=\"video-duration\"],[data-e2e=\"like-count\"],[data-e2e=\"comment-count\"],[data-e2e=\"share-count\"],header,time"
+  }
+}

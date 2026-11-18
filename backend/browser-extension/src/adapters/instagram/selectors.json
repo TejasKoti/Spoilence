@@ -1,0 +1,9 @@
+{
+  "selector": "article,main a[href^=\"/reel/\"],main a[href^=\"/p/\"]",
+  "metadata": "[aria-label],img[alt],h1,h2,h3",
+  "concealment": {
+    "titles": "h1,[data-testid=\"post-caption\"],[data-testid=\"comment-text\"],.x1lliihq h2",
+    "thumbnails": "img,video",
+    "preserve": "header,[data-testid=\"post-author\"],[data-testid=\"like-count\"],[data-testid=\"view-count\"],time,a[href^=\"/liked_by/\"]"
+  }
+}

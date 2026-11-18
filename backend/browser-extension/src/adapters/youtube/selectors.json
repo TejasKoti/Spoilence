@@ -1,0 +1,9 @@
+{
+  "selector": "ytd-rich-item-renderer,ytd-video-renderer,ytd-compact-video-renderer,ytd-reel-item-renderer,ytd-reel-video-renderer,ytd-comment-thread-renderer,yt-lockup-view-model,ytm-rich-item-renderer,ytm-video-with-context-renderer,ytm-comment-thread-renderer",
+  "metadata": "[title],[aria-label],img[alt],#video-title,#content-text,h1,h2,h3",
+  "concealment": {
+    "titles": "#video-title,#video-title-link,#content-text,#description,#description-text,.metadata-snippet-text,.yt-lockup-metadata-view-model__title,.media-item-headline,.compact-media-item-headline,.shortsLockupViewModelHostMetadataTitle,h1,h2,h3",
+    "thumbnails": "img,video",
+    "preserve": "#channel-name,ytd-channel-name,ytd-video-owner-renderer,#metadata,#metadata-line,#duration,.duration,#views,.views,.channel-name,#published,#author-text,#published-time-text,#vote-count-middle,#toolbar,ytd-comment-action-buttons-renderer,.yt-lockup-metadata-view-model__metadata,.yt-spec-avatar-shape,ytm-badge-and-byline-renderer,.media-item-byline,.compact-media-item-byline,ytd-thumbnail-overlay-time-status-renderer,ytm-thumbnail-overlay-time-status-renderer"
+  }
+}

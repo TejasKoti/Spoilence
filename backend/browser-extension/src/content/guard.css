@@ -1,0 +1,20 @@
+/* Static guard applies before DOM construction. No transition can expose classified content. */
+html:not([data-ss-ready]):not([data-ss-off]) :is(__CARD_SELECTORS__) {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+[data-ss-state='pending'] {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+[data-ss-state='hide'] {
+  display: none !important;
+}
+[data-ss-original-title] {
+  display: none !important;
+}
+[data-ss-censored-media] {
+  filter: blur(32px) !important;
+  clip-path: inset(0) !important;
+}

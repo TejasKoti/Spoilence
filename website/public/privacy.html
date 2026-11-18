@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" class="spoilence-page">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="How Spoilence handles browsing content, memory-only decisions, settings, and website hosting."
+    />
+    <title>Privacy : Spoilence</title>
+    <link rel="icon" href="/assets/favicon.png" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/cinematic.css" />
+  </head>
+  <body class="reference-site">
+    <a class="skip-link" href="#main" tabindex="0">Skip to content</a>
+    <header class="site-header wrap">
+      <a class="wordmark" href="/"
+        ><img
+          src="/assets/favicon.png"
+          width="34"
+          height="34"
+          alt=""
+        />spoilence</a
+      ><a class="button button-small button-dark" href="/#install"
+        >Get Spoilence</a
+      >
+    </header>
+    <main class="wrap legal-page" id="main" tabindex="-1">
+      <p class="technical">Privacy / Updated November 17, 2026</p>
+      <h1>Less exposure.<br />Less data.</h1>
+      <p>
+        Spoilence is an independent browser-extension project. This page
+        describes the extension and this download website separately.
+      </p>
+      <h2>The extension</h2>
+      <p>
+        Detection uses local text rules and accessible page metadata on
+        supported YouTube, Instagram and TikTok layouts. It adds no
+        detection-related network requests. There is no server inference,
+        account, telemetry, analytics or automatic rule download.
+      </p>
+      <p>
+        Raw page content is processed in memory and is never written to disk by
+        Spoilence. Decisions live in a bounded memory cache with opaque
+        identifiers. Each decision expires no later than 24 hours from creation;
+        reading it does not extend its lifetime. OFF and Clear Data clear
+        decisions. Resume and clock rollback discard stale state.
+      </p>
+      <p>
+        Only non-content preferences and explicitly imported, validated rule
+        packs may remain in extension local storage. Full reset removes those
+        too. No screenshot capture, OCR provider, image classifier, audio
+        analysis or video analysis is enabled.
+      </p>
+      <h2>Your controls</h2>
+      <p>
+        Open the extension popup to change Hide/Blur, sensitivity, per-site
+        preferences or protection status. You can reset local data there. After
+        removing or externally disabling the extension, reload open tabs to
+        clear already-injected covers. Spoilence cannot erase a website's,
+        browser's or operating system's own caches.
+      </p>
+      <h2>This website</h2>
+      <p>
+        The site serves its scripts, fonts, artwork and extension download from
+        the same host. It contains no analytics, tracking pixels, cookies,
+        browser storage, external embeds or third-party font requests. Browser
+        identity is read locally to suggest installation instructions. Pointer
+        position is used only while interacting with the artwork; it is not
+        recorded, retained or transmitted.
+      </p>
+      <p>
+        Visiting or downloading files necessarily sends normal HTTP requests to
+        the hosting provider. The site is configured for Cloudflare static
+        hosting. Cloudflare and any infrastructure settings chosen by the
+        deployer may process request metadata such as IP addresses and user
+        agents. Extension detection does not send browsing content to this
+        website or Cloudflare.
+      </p>
+      <h2>Coverage and independence</h2>
+      <p>
+        Each website download asks you to accept the
+        <a href="/terms.html">Terms of Use</a>. The checkbox resets for every
+        request. Acceptance is not stored in cookies, browser storage or a
+        server-side agreement log by this site.
+      </p>
+      <p>
+        This development release is for compatible desktop browsers. It can miss
+        spoilers and has no signed store release included. Safari and individual
+        browser forks have separate validation limits. Spoilence is not
+        affiliated with Rockstar Games.
+      </p>
+      <a class="button button-dark" href="/">Back to Spoilence</a>
+    </main>
+    <footer class="site-footer wrap legal-footer">
+      <a class="wordmark" href="/">spoilence</a
+      ><a href="/#questions">Questions</a>
+    </footer>
+  </body>
+</html>

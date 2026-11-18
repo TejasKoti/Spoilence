@@ -1,0 +1,13 @@
+{
+  "name": "@spoilence/tests",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "vitest": "5.1.0",
+    "jsdom": "31.0.1",
+    "@types/node": "26.6.6",
+    "@axe-core/playwright": "4.14.0"
+  }
+}

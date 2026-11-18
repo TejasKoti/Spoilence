@@ -1,0 +1,15 @@
+{
+  "family": "Big Shoulders Display",
+  "subset": "latin",
+  "style": "normal",
+  "weightRange": "100 900",
+  "fontUrl": "https://fonts.gstatic.com/s/bigshouldersdisplay/v24/fC1_PZJEZG-e9gHhdI4-NBbfd2ys3SjJCx1czNDu.woff2",
+  "fontFile": "public/assets/fonts/BigShouldersDisplayVariable.woff2",
+  "bytes": 35436,
+  "sha256": "698f9960927e7b5a0c38e5bf388cd0a6e42d855062fe70366cf5057664e39401",
+  "licenseUrl": "https://raw.githubusercontent.com/google/fonts/main/ofl/bigshouldersdisplay/OFL.txt",
+  "licenseFile": "public/assets/fonts/BigShouldersDisplay-LICENSE.txt",
+  "license": "SIL Open Font License 1.1",
+  "cssSource": "https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap",
+  "runtimeRemoteFontRequestRequired": false
+}

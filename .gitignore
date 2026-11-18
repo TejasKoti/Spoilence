@@ -1,0 +1,13 @@
+**/node_modules/
+backend/build/
+product/
+Trash/
+tests/results/
+playwright-report/
+.gradle/
+build/
+local.properties
+*.xcuserstate
+xcuserdata/
+*.jks
+*.keystore

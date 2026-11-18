@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#F5F6FA" />
+    <title>Set up Spoilence</title><link rel="icon" href="spoilence-logo.png" type="image/png" />
+    <link rel="stylesheet" href="setup.css" />
+    <script src="browser-catalog.js" defer></script>
+    <script src="setup.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#install">Skip to installation</a>
+    <header class="shell masthead">
+      <a class="wordmark" href="START-HERE.html" aria-label="Spoilence setup home" translate="no"
+        ><img src="spoilence-logo.png" width="40" height="40" alt="" />Spoilence</a
+      ><span class="local">Local protection. Your choice.</span>
+    </header>
+    <main class="shell">
+      <section class="hero" aria-labelledby="headline">
+        <div>
+          <h1 id="headline">Keep the story yours.</h1>
+          <p class="intro">
+            Conceal likely GTA VI spoilers while you browse. Choose Hide for the whole item or Blur
+            to keep its place with a protected thumbnail and title.
+          </p>
+          <a class="primary" href="#install">Set up your browser</a>
+        </div>
+        <div
+          class="demo"
+          aria-label="A fictional cover demonstration, separate from extension controls"
+        >
+          <div class="demo-top">
+            <span class="sample-avatar" aria-hidden="true"></span><span>Example game post</span
+            ><span class="demo-label">Demo</span>
+          </div>
+          <div class="sample">
+            <div class="sample-lines" aria-hidden="true"><i></i><i></i><i></i></div>
+            <p id="sampleContent">A fictional example. No GTA VI story details.</p>
+            <div class="curtain" id="curtain">
+              <span class="curtain-fold one"></span><span class="curtain-fold two"></span>
+              <div class="cover-message">
+                <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+                  <path
+                    d="M3 12c4-7 14-7 18 0-4 7-14 7-18 0Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  />
+                  <path d="m4 3 16 18" stroke="currentColor" stroke-width="2" /></svg
+                ><strong>Protected by Spoilence</strong>
+              </div>
+            </div>
+          </div>
+          <button id="preview" class="demo-reveal" type="button" aria-pressed="false">
+            Reveal the safe demo
+          </button>
+        </div>
+      </section>
+      <section id="install" class="install" aria-labelledby="setupTitle">
+        <div class="section-heading">
+          <div>
+            <p class="step-label">Start here</p>
+            <h2 id="setupTitle">Choose your browser</h2>
+          </div>
+          <span class="build-badge">Development build 0.2.0</span>
+        </div>
+        <div class="platform-controls">
+          <label
+            >Device<select id="device" name="device" autocomplete="off">
+              <option value="desktop">Windows / Linux / other desktop</option>
+              <option value="android">Android</option>
+              <option value="ios">iPhone / iPad</option>
+              <option value="mac">Mac</option>
+            </select></label
+          ><label id="browserField"
+            >Browser<select id="browser" name="browser" autocomplete="off"></select
+          ></label>
+        </div>
+        <div class="setup-content">
+          <div>
+            <span id="detected" class="detected">Checking your device…</span>
+            <h3 id="platformTitle">Choose your setup</h3>
+            <p id="platformDescription"></p>
+            <button
+              id="showSteps"
+              class="primary"
+              type="button"
+              aria-expanded="false"
+              aria-controls="steps"
+            >
+              Show browser setup
+            </button>
+
+            <p id="availability" class="availability" hidden></p>
+          </div>
+          <aside class="included">
+            <h4>Ready after setup</h4>
+            <ul>
+              <li>Aggressive protection starts on.</li>
+              <li>Hide removes the whole item without a reveal bar.</li>
+              <li>Blur protects thumbnails and titles, keeping recognized metadata visible.</li>
+              <li>Switch modes or turn protection off to restore hidden items.</li>
+              <li>Detection works locally without sending your content.</li>
+            </ul>
+          </aside>
+        </div>
+        <div id="steps" class="steps" hidden>
+          <h4 id="stepsHeading" tabindex="-1">Browser setup</h4>
+          <ol id="stepList"></ol>
+          <div id="copyTools" class="copy-tools">
+            <label
+              >Browser settings address<input
+                id="settingsAddress"
+                name="settingsAddress"
+                type="text"
+                readonly
+                autocomplete="off"
+                spellcheck="false" /></label
+            ><button id="copyAddress" type="button">Copy settings address</button
+            ><label
+              >Matching extension location<input
+                id="extensionPath"
+                name="extensionPath"
+                type="text"
+                readonly
+                autocomplete="off"
+                spellcheck="false" /></label
+            ><button id="copyPath" type="button">Copy extension location</button>
+          </div>
+          <p class="hint">
+            Your browser requires these permission steps. Spoilence does not change browser profiles
+            or silently enable extensions.
+          </p>
+        </div>
+        <p id="setupStatus" class="status" role="status" aria-live="polite"></p>
+      </section>
+      <section class="help">
+        <h2>A little help, if you need it.</h2>
+        <details>
+          <summary>I opened a file without extracting the ZIP.</summary>
+          <p>
+            Extract your named <strong>spoilence_browsername.zip</strong> into a permanent folder.
+            Load that extracted folder directly in your browser.
+          </p>
+        </details>
+        <details>
+          <summary>The browser says this is a development extension.</summary>
+          <p>
+            This build uses developer installation. Firefox temporary installs disappear when
+            Firefox closes. A signed store release will remove these development steps; one is not
+            included yet.
+          </p>
+        </details>
+        <details>
+          <summary>Is every browser supported?</summary>
+          <p>
+            Each browser gets a named ZIP containing only its extension runtime and required
+            licenses. The guide stays outside the ZIP. The manifest is directly in the extracted
+            folder. Compatibility depends on the browser supporting modern WebExtensions. Forks
+            still need individual runtime validation. Mobile browsers and browsers without
+            compatible extension APIs are outside this release.
+          </p>
+        </details>
+        <details>
+          <summary>What should I expect from protection?</summary>
+          <p>
+            Spoilence targets GTA VI. Hide removes the whole detected item. Blur applies a 32px
+            thumbnail blur and the safe title "Spoilence Protected - GTA 6 Leak", preserving
+            recognized channel, views and time details. Unknown layouts use a conservative cover.
+            Image-only spoilers, unsupported languages and changed layouts can be missed. Nothing
+            analyses audio or video. Use the popup to change modes, adjust sensitivity or clear
+            local data.
+          </p>
+        </details>
+      </section>
+    </main>
+    <footer class="shell">Spoilence <span>Less exposure. More choice.</span></footer>
+    <noscript
+      ><p class="shell">
+        Extract the ZIP named for your browser into a permanent spoilence_browser-id folder first.
+        Chrome-type browsers: open Extensions, enable Developer mode, choose Load unpacked and
+        select that extracted folder directly. Firefox-type browsers: open about:debugging, choose
+        Load Temporary Add-on and select manifest.json directly inside the extracted folder. Safari
+        18.4+ on Mac: Settings > Advanced > web developer features, then Developer > Add Temporary
+        Extension > extracted spoilence_safari folder. Keep the loaded folder in place. No nested
+        browser-family folder or mobile installation is included.
+      </p></noscript
+    >
+  </body>
+</html>
